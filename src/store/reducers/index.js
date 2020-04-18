@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import routerReducers from './router';
+import { soundReducer, musicReducer } from './settings';
 
 const INITIAL_GAUGE_VALUE = 0.5;
 
@@ -24,7 +25,7 @@ export const reducers = combineReducers({
     host: id('host'),
     gauges: id('gauges'),
     skills: id('skills'),
-    musicOn: id('musicOn'),
-    soundOn: id('soundOn'),
+    musicOn: musicReducer,
+    soundOn: soundReducer,
 });
 

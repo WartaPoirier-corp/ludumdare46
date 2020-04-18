@@ -23,7 +23,7 @@ export default function Button(props = {}) {
             onClick={onToggle}
             href="#"
             title={state.alt}
-        >
+            >
             {props.children && props.children.length() > 0 ? props.children : icon}
         </a>
     );

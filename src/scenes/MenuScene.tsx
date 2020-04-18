@@ -1,12 +1,19 @@
 import React from 'react';
-import { useStore, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from '../components/Button';
 import IconButton from '../components/IconButton';
 import { goTo } from '../store/actions/router';
+import { toggleSound, toggleMusic } from '../store/actions/settings';
 
 export default function MenuScene() {
-    const store = useStore();
-    const state = store.getState();
+    const { soundOn, musicOn, host } = useSelector(state => {
+        return {
+            soundOn: state.soundOn,
+            musicOn: state.musicOn,
+            host: state.host,
+        };
+    });
+    console.log(soundOn, musicOn, host);
     const dispatch = useDispatch();
 
     const newGame = React.useCallback(() => {
@@ -18,27 +25,35 @@ export default function MenuScene() {
     const credits = React.useCallback(() => {
         dispatch(goTo('credits'));
     });
+    const toggleMusicCb = React.useCallback(() => {
+        dispatch(toggleMusic())
+    });
+    const toggleSoundCb = React.useCallback(() => {
+        dispatch(toggleSound())
+    });
 
     return (
         <main className="menu">
             <section>
                 <Button onClick={newGame}>New game</Button>
-                {state.host.animal ? <Button onClick={resume}>Resume game</Button> : null}
+                {host.animal ? <Button onClick={resume}>Resume game</Button> : null}
                 <Button onClick={credits}>Credits</Button>
             </section>
             <footer>
                 <IconButton
-                    on={state.musicOn}
+                    on={musicOn}
                     iconOn='/icons/music-on.png'
                     iconOff='/icons/music-off.png'
                     altOn='Music is on.'
-                    altOff='Music is off'/>
+                    altOff='Music is off'
+                    onToggle={toggleMusicCb}/>
                  <IconButton
-                    on={state.soundOn}
+                    on={soundOn}
                     iconOn='/icons/sound-on.png'
                     iconOff='/icons/sound-off.png'
                     altOn='Sound is on.'
-                    altOff='Sound is off'/>
+                    altOff='Sound is off'
+                    onToggle={toggleSoundCb}/>
             </footer>
         </main>
     );
