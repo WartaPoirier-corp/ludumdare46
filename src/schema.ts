@@ -7,7 +7,7 @@ type HintCategory = 'sound' | 'visual' | 'smell' | 'feelings' | 'basic-needs';
 
 interface Hint {
     category: HintCategory;
-    actions: string?[];    
+    actions: (string | null)[];    
 }
 
 interface Action {

@@ -3,9 +3,9 @@ import { createStore } from 'redux';
 const INITIAL_GAUGE_VALUE = 0.5;
 
 const initialState = {
-    host: null,
+    host: {},
     page: 'intro',
-    gauges: Array.from(['mood', 'energy', 'hunder', 'peepoo'], (name, _) => {
+    gauges: ['mood', 'energy', 'hunder', 'peepoo'].map(name => {
         return {
             value: INITIAL_GAUGE_VALUE,
             name,
