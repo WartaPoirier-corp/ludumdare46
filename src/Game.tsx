@@ -1,12 +1,11 @@
 import React from 'react';
 import { Provider as ReduxProvider, useStore } from 'react-redux';
+import Credits from './scenes/CreditsScene';
+import Intro from './scenes/IntroScene';
+import MainScene from './scenes/MainScene';
+import Menu from './scenes/MenuScene';
+import SkillsTree from './scenes/SkillsTreeScene';
 import store from './store';
-import Menu from './scenes/menu';
-import Credits from './scenes/credits';
-import Intro from './scenes/intro';
-import HostSelection from './scenes/host-selection';
-import MainScene from './scenes/main-scene';
-import SkillsTree from './scenes/skills';
 
 export default function Game() {
     return (
@@ -18,9 +17,9 @@ export default function Game() {
 
 function Router() {
     const store = useStore();
-
     const p = store.getState().page;
-    switch p {
+
+    switch (p) {
         case 'menu': return <Menu />;
         case 'credits': return <Credits />;
         case 'intro': return <Intro />;
