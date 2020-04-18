@@ -1,0 +1,35 @@
+{
+  "name": "ludumdare46",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "game",
+    "gamejam",
+    "jam",
+    "ludum",
+    "dare",
+    "ludumdare"
+  ],
+  "homepage": "https://github.com/WartaPoirier-corp/ludumdare46#readme",
+  "bugs": {
+    "url": "https://github.com/WartaPoirier-corp/ludumdare46/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WartaPoirier-corp/ludumdare46.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "WartaPoirier Corp.",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
