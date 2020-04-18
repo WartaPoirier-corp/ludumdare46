@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import routerReducers from './router';
-import { musicReducer, soundReducer } from './settings';
+import { soundReducer, musicReducer } from './settings';
 
 const INITIAL_GAUGE_VALUE = 0.5;
 
 export const initialState = {
     host: {},
-    page: 'skills',
+    page: 'menu',
     gauges: ['mood', 'energy', 'hunder', 'peepoo'].map(name => {
         return {
             value: INITIAL_GAUGE_VALUE,

@@ -1,17 +1,1 @@
-[
-    {
-        "id": "root",
-        "parentId": null,
-        "pointsToUnlock": 0,
-        "x": 2,
-        "y": 0
-    },
-    {
-        "id": "l1",
-        "parentId": "root",
-        "pointsToUnlock": 0,
-        "icon": "vision/vision1.png",
-        "x": 0,
-        "y": 2
-    }
-]
+[]
