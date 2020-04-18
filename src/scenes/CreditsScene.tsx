@@ -7,7 +7,7 @@ export default function CreditsScene() {
     const dispatch = useDispatch();
     const back = React.useCallback(() => {
         dispatch(goTo('menu'));
-    });
+    }, []);
     return (
         <div className="credits">
             <h1>Credits</h1>

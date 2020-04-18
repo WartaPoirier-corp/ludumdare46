@@ -1,8 +1,13 @@
 import React from 'react';
 import { useStore } from 'react-redux';
 
-export default function Button(props = {}) {
+interface Props {
+    onClick?: () => void;
+    children?: any[] | any;
+}
+
+export default function Button(props: Props = {}) {
     return (
-        <a className="button" href="#" ...{props}>{props.children}</a>
+        <a className="button" href="#" {...props}>{props.children}</a>
     );
 }
