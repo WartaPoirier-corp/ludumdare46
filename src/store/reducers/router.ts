@@ -8,3 +8,4 @@ function reducer(page = 'menu', action) {
 }
 
 export default reducer;
+
