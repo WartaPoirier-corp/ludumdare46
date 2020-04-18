@@ -1,23 +1,23 @@
-interface Choice {
+export interface Choice {
     hints: Hint[];
     actions: Action[];
 }
 
 type HintCategory = 'sound' | 'visual' | 'smell' | 'feelings' | 'basic-needs';
 
-interface Hint {
+export interface Hint {
     category: HintCategory;
     actions: (string | null)[];    
 }
 
-interface Action {
+export interface Action {
     title: string;
     outcome: ActionOutcome[];
 }
 
 type Gauge = 'mood' | 'energy' | 'hunger' | 'peepoo';
 
-interface ActionOutcome {
+export interface ActionOutcome {
     gauge: Gauge;
     variation: Number;
 }

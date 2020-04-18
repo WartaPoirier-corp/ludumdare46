@@ -4,7 +4,7 @@ const INITIAL_GAUGE_VALUE = 0.5;
 
 const initialState = {
     host: {},
-    page: 'intro',
+    page: 'menu',
     gauges: ['mood', 'energy', 'hunder', 'peepoo'].map(name => {
         return {
             value: INITIAL_GAUGE_VALUE,
