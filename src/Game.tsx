@@ -1,5 +1,5 @@
 import React from 'react';
-import { Provider as ReduxProvider, useStore } from 'react-redux';
+import { Provider as ReduxProvider, useSelector } from 'react-redux';
 import Credits from './scenes/CreditsScene';
 import Intro from './scenes/IntroScene';
 import MainScene from './scenes/MainScene';
@@ -16,8 +16,7 @@ export default function Game() {
 }
 
 function Router() {
-    const store = useStore();
-    const p = store.getState().page;
+    const p = useSelector(state => state.page);
 
     switch (p) {
         case 'menu': return <Menu />;

@@ -1,21 +1,8 @@
 import { createStore } from 'redux';
-
-const INITIAL_GAUGE_VALUE = 0.5;
-
-const initialState = {
-    host: {},
-    page: 'menu',
-    gauges: ['mood', 'energy', 'hunder', 'peepoo'].map(name => {
-        return {
-            value: INITIAL_GAUGE_VALUE,
-            name,
-        };
-    }),
-    skills: [],
-};
-
-export type State = typeof initialState;
+import { reducers, initialState } from './reducers'
 
 export default createStore(
-    (state = initialState, _) => state, // Initialization reducer
+    reducers, // Initialization reducer
+    initialState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
