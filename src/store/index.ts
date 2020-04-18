@@ -12,6 +12,8 @@ const initialState = {
         };
     }),
     skills: [],
+    musicOn: true,
+    soundOn: true,
 };
 
 export type State = typeof initialState;

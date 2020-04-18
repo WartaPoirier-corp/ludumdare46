@@ -16,14 +16,14 @@ export default function MenuScene() {
             <footer>
                 <IconButton
                     on={state.musicOn}
-                    iconOn='/assets/icons/music-on.png'
-                    iconOff='/assets/icons/music-off.png'
+                    iconOn='/icons/music-on.png'
+                    iconOff='/icons/music-off.png'
                     altOn='Music is on.'
                     altOff='Music is off'/>
                  <IconButton
                     on={state.soundOn}
-                    iconOn='/assets/icons/sound-on.png'
-                    iconOff='/assets/icons/sound-off.png'
+                    iconOn='/icons/sound-on.png'
+                    iconOff='/icons/sound-off.png'
                     altOn='Sound is on.'
                     altOff='Sound is off'/>
             </footer>

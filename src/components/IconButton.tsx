@@ -11,9 +11,10 @@ export default function Button(props = {}) {
         });
         props.onToggle(!state.on);
     });
-    const iconSrc = state.on ? props.onIcon : props.offIcon;
-    const alt = state.on ? props.onAlt : props.offAlt;
+    const iconSrc = state.on ? props.iconOn: props.iconOn;
+    const alt = state.on ? props.altOn : props.altOff;
     const icon = (<img src={iconSrc} alt={alt} />);
+    console.log(iconSrc, alt);
     return (
         <a className={"icon-button " + (state.on ? 'on' : 'off')}
             onClick={onToggle}
