@@ -1,7 +1,17 @@
 import { createStore } from 'redux';
 
+const INITIAL_GAUGE_VALUE = 0.5;
+
 const initialState = {
-    message: 'Hello world from Redux',
+    host: null,
+    page: 'intro',
+    gauges: Array.from(['mood', 'energy', 'hunder', 'peepoo'], (name, _) => {
+        return {
+            value: INITIAL_GAUGE_VALUE,
+            name,
+        };
+    }),
+    skills: [],
 };
 
 export type State = typeof initialState;
