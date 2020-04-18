@@ -1,0 +1,22 @@
+.host-selection {
+    background: $darkpurple;
+    padding: 5em;
+    min-height: calc(100vh - 10em);
+    color: white;
+    & > p {
+        text-align: center;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        .card {
+            flex: 1;
+            margin: 20vh 2em 0em;
+            padding-bottom: 0px;
+
+            .button {
+                margin: 1em 0em;
+            }
+        }
+    }
+}

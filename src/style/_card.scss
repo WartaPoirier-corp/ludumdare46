@@ -1,0 +1,23 @@
+.card {
+    background: white;
+    color: $darkpurple;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 10em;
+        max-height: 10em;
+        margin: 1em auto;
+    }
+
+    .main {
+        flex: 1;
+    }
+}
