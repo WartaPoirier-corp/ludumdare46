@@ -10,6 +10,12 @@ $cyan: #49ffea;
     font-family: sans-serif;
 }
 
+html, body, #app, #app > * {
+    background: $darkpurple;
+    width: 100%;
+    height: 100%;
+}
+
 // Components
 @import '_buttons';
 @import '_card';
