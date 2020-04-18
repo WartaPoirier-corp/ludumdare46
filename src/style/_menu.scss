@@ -1,0 +1,15 @@
+.menu {
+    height: calc(100vh - 10em);
+    background: $darkpurple;
+    padding: 5em;
+
+    section, footer {
+        max-width: 20vw;
+        margin: 1em auto;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+}

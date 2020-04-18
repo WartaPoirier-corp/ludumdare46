@@ -1,0 +1,34 @@
+.button, .icon-button {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: white;
+    background: $purple;
+    padding: 2em;
+    margin: 1em auto;
+    transition-property: background, transform;
+    transition-duration: 0.1s, 0.05s;
+    transition-timing-function: ease-in, ease-in-out;
+    outline: none;
+
+    &:hover, &.on {
+        background: $lightpurple;
+    }
+    
+    &:active, &.on {
+        transform: scale(0.95);
+    }
+}
+
+.button {
+    border-radius: 5px;
+    max-width: 20vw;
+}
+
+.icon-button {
+    border-radius: 100%;
+    width: 2em;
+    height: 2em;
+}
+
