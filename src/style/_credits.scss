@@ -1,0 +1,25 @@
+.credits {
+    background: $darkpurple;
+    color: white;
+    line-height: 1.33em;
+    padding: 5em;
+    height: calc(100vh - 10em);
+
+    & > * {
+        margin: 1em auto;
+        max-width: 40vw;
+    }
+
+    .button {
+        max-width: 20vw;
+        margin: 2em auto;
+    }
+
+    a, a:visited {
+        color: white;
+    }
+
+    ul {
+        padding-left: 2em;
+    }
+}
