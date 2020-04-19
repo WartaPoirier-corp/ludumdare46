@@ -5,6 +5,8 @@ import SkillTreeItem from './SkillTreeItem';
 interface SkillTreeProps {
     skills: SkillDefinition[];
     unlockedSkills: string[];
+
+    unlockSkill(skillId: string): void;
 }
 
 const treeGridSizeFor = (skills: SkillDefinition[]) => skills
@@ -58,7 +60,6 @@ export default function SkillTree(props: SkillTreeProps) {
     }, []);
 
     const isUnlocked = useCallback((skill: SkillDefinition) => {
-        console.log(props.unlockedSkills, skill.id);
         return !skill.parentId || props.unlockedSkills.includes(skill.id);
     }, [props.unlockedSkills]);
 
@@ -92,7 +93,11 @@ export default function SkillTree(props: SkillTreeProps) {
                     data-id={skill.id}
                     data-parent-id={skill.parentId}
                 >
-                    <SkillTreeItem skill={skill} unlocked={isUnlocked(skill)} />
+                    <SkillTreeItem
+                        skill={skill}
+                        unlocked={isUnlocked(skill)}
+                        unlockSkill={props.unlockSkill}
+                    />
                 </div>
             ))}
             <canvas

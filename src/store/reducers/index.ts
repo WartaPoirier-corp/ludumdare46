@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
-import routerReducer from './router';
-import { soundReducer, musicReducer } from './settings';
 import { hostReducer } from './game';
+import routerReducer from './router';
+import { musicReducer, soundReducer } from './settings';
+import { pointsReducer, skillsReducer } from './skills';
 
 const INITIAL_GAUGE_VALUE = 0.5;
 
@@ -20,6 +21,7 @@ export const initialState = {
             name,
         };
     }),
+    points: 0,
     skills: [],
     musicOn: true,
     soundOn: true,
@@ -32,7 +34,8 @@ export const reducers = combineReducers({
     page: routerReducer,
     host: hostReducer,
     gauges: id('gauges'),
-    skills: id('skills'),
+    points: pointsReducer,
+    skills: skillsReducer,
     musicOn: musicReducer,
     soundOn: soundReducer,
 });
