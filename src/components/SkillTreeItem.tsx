@@ -8,6 +8,10 @@ interface SkillTreeItemProps {
     unlockSkill(skillId: string): void;
 }
 
+const buildTip = (name: string, description?: string) => description
+    ? name + '\n' + description
+    : name;
+
 export default function SkillTreeItem(props: SkillTreeItemProps) {
     const readableName = props.skill.name || props.skill.id;
     const isRoot = !props.skill.parentId;
@@ -21,7 +25,7 @@ export default function SkillTreeItem(props: SkillTreeItemProps) {
     return (
         <button
             className={'skills-tree-item' + (isRoot ? ' root' : '')}
-            title={readableName}
+            data-tip={buildTip(readableName, props.skill.description)}
             disabled={props.unlocked}
             onClick={onClick}
         >

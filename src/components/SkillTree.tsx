@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 import { useSize } from 'react-hook-size';
+import ReactTooltip from "react-tooltip";
 import { SkillDefinition } from '../schema';
 import SkillTreeItem from './SkillTreeItem';
 
@@ -85,6 +86,22 @@ export default function SkillTree(props: SkillTreeProps) {
                 gridTemplateRows: `repeat(${gridSizeY + 1}, 1fr)`,
             }}
         >
+            <ReactTooltip
+                effect="solid"
+                place="left"
+                backgroundColor="#252444"
+                getContent={(tooltip) => {
+                    if (!tooltip) return <></>;
+
+                    const [name, description] = tooltip.split('\n');
+                    return (
+                        <>
+                            <h4 style={{ fontFamily: 'monospace' }}>{name}</h4>
+                            {description && <p>{description}</p>}
+                        </>
+                    );
+                }}
+            />
             {skills.filter(isVisible).map((skill: SkillDefinition) => (
                 <div
                     key={skill.id}
