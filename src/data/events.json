@@ -1,0 +1,66 @@
+[
+    {
+      "animals": [ "cat" ],
+      "description": "You're walking past something.",
+      "hints": [
+        {"category": "vision-2", "description": "It's pellet-shaped."},
+        {"category": "smell-1", "description": "You can tell a smell"},
+        {"category": "smell-2", "description": "It's a foul smell"}
+      ],
+      "actions": [
+        { "title": "Eat", "outcomes": { "mood": -0.2, "health": -0.2 }, "endMsg":"You've eaten your litter"},
+        { "title": "Attack", "outcomes": { "energy": -0.2 } , "endMsg":"You have fiercely attacked your litter box"},
+        { "title": "Relieve yourself", "outcomes": { "peepoo": 0.5 } , "endMsg":"You defacated in your litter box."},
+        { "title": "Do nothing", "outcomes": {}, "endMsg": "You did nothing in front of your litter box"}
+      ]
+    },
+    {
+      "animals": [ "cat" ],
+      "description": "You're walking past something.",
+      "hints": [
+        {"category": "vision-2", "description": "It's shaped like pellets"},
+        {"category": "smell-1", "description": "You can tell a smell"},
+        {"category": "smell-2", "description": "It's an enticing smell"}
+      ],
+      "actions": [
+        { "title": "Eat", "outcomes": { "mood": 0.2, "hunger": 0.5 }, "endMsg":"You've eaten your bowl"},
+        { "title": "Attack", "outcomes": { "energy": -0.2 } , "endMsg":"You have fiercely attacked your bowl."},
+        { "title": "Relieve yourself", "outcomes": { "mood": -0.3, "peepoo": 0.5 } , "endMsg":"You've relieved yourself in your bowl."},
+        { "title": "Do nothing", "outcomes": {}, "endMsg": "You've done nothing in front of your bowl"}
+      ]
+    },
+
+    {
+      "animals": [ "cat" ],
+      "description": "You're walking past something.",
+      "hints": [
+        {"category": "vision-1", "description": "You can distinguish a movement."},
+        {"category": "vision-2", "description": "It appears to be a feline."},
+        {"category": "vision-3", "description": "It replicates your movements."},
+        {"category": "smell-3", "description": "But no smell come out of it."},
+        {"category": "sound-3", "description": "You hear nothing but the sound of your footsteps."}
+      ],
+      "actions": [
+        { "title": "Attack", "outcomes": { "energy": -0.2 } , "endMsg":"Vous avez farouchement attaqué votre reflet dans un miroir"},
+        { "title": "Flee", "outcomes": { "energy" : -0.2, "mood" : -0.1 } , "endMsg":"You ran away from your reflection in a mirror"},
+        { "title": "Do Nothing", "outcomes": {}, "endMsg": "Vous n'avez rien fait devant votre reflet dans un miroir"}
+      ]
+    },
+  
+		{
+      "animals": [ "cat" ],
+      "description": "You're walking past something.",
+      "hints": [
+        {"category": "vision-2", "description": "Vous distinguez un léger mouvement"},
+        {"category": "vision-3", "description": "Ça ressemble à un insecte"},
+        {"category": "sound-1", "description": "Vous entendez un petit bruit"},
+        {"category": "sound-2", "description": "C'est un bourdonnement"}
+      ],
+      "actions": [
+        { "title": "Manger", "outcomes": { "mood": -0.1, "hunger": 0.1 }, "endMsg": "Vous avez mangé un insecte"},
+        { "title": "Attaquer", "outcomes": { "energy": -0.1, "mood": 0.3 } , "endMsg": "Vous avez joué avec un insecte"},
+        { "title": "Fuir", "outcomes": { "energy": -0.2, "mood": -0.1 } , "endMsg": "Vous avez fuit devant un insecte"},
+        { "title": "Ne rien faire", "outcomes": {}, "endMsg": "Vous n'avez rien fait face à l'insecte devant vous"}
+      ]
+    }
+]

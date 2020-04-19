@@ -14,7 +14,6 @@ export default function MenuScene() {
             host: state.host,
         };
     });
-    console.log(soundOn, musicOn, host);
     const dispatch = useDispatch();
 
     const newGame = React.useCallback(() => {

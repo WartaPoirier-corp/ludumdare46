@@ -18,14 +18,14 @@ export default function Button(props: Props = {
     altOff: '',
     altOn: ''
 }) {
-    const icon = !!props.on ? props.iconOn: props.iconOff;
+    const iconSrc = !!props.on ? props.iconOn: props.iconOff;
     const alt = !!props.on ? props.altOn : props.altOff;
     const onToggle = React.useCallback(() => {
         if (props.onToggle) {
             props.onToggle(!props.on);
         }
     }, [props]);
-    const icon = (<img src={icon} alt={alt} />);
+    const icon = (<img src={iconSrc} alt={alt} />);
     return (
         <a className={"icon-button " + (props.on ? 'on' : 'off')}
             onClick={onToggle}
