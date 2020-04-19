@@ -1,4 +1,5 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useSize } from 'react-hook-size';
 import { SkillDefinition } from '../schema';
 import SkillTreeItem from './SkillTreeItem';
 
@@ -27,13 +28,19 @@ export default function SkillTree(props: SkillTreeProps) {
         () => treeGridSizeFor(skills), [skills],
     );
 
-    const canvasRef = useCallback((canvas: HTMLCanvasElement) => {
+    const container = useRef<HTMLDivElement>();
+    const canvasRef = useRef<HTMLCanvasElement>();
+
+    const containerSize = useSize(container);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
         if (!canvas) return;
 
         const container = canvas.parentElement!;
 
-        canvas.width = container.clientWidth;
-        canvas.height = container.clientHeight;
+        canvas.width = containerSize.width || 0;
+        canvas.height = containerSize.height || 0;
 
         const context = canvas.getContext('2d')!;
         context.strokeStyle = 'white';
@@ -57,7 +64,7 @@ export default function SkillTree(props: SkillTreeProps) {
                 context.stroke();
             }
         }
-    }, []);
+    }, [containerSize, skills, props.unlockedSkills]);
 
     const isUnlocked = useCallback((skill: SkillDefinition) => {
         return !skill.parentId || props.unlockedSkills.includes(skill.id);
@@ -70,6 +77,8 @@ export default function SkillTree(props: SkillTreeProps) {
 
     return (
         <div
+            // @ts-ignore
+            ref={container}
             style={{
                 position: 'relative',
                 display: 'grid',
@@ -77,6 +86,7 @@ export default function SkillTree(props: SkillTreeProps) {
                 height: '100%',
                 gridTemplateColumns: `repeat(${gridSizeX + 1}, 1fr)`,
                 gridTemplateRows: `repeat(${gridSizeY + 1}, 1fr)`,
+                overflow: 'hidden',
             }}
         >
             {skills.filter(isVisible).map((skill: SkillDefinition) => (
