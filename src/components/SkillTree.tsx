@@ -79,26 +79,19 @@ export default function SkillTree(props: SkillTreeProps) {
         <div
             // @ts-ignore
             ref={container}
+            className="skills-tree"
             style={{
-                position: 'relative',
-                display: 'grid',
-                width: '100%',
-                height: '100%',
                 gridTemplateColumns: `repeat(${gridSizeX + 1}, 1fr)`,
                 gridTemplateRows: `repeat(${gridSizeY + 1}, 1fr)`,
-                overflow: 'hidden',
             }}
         >
             {skills.filter(isVisible).map((skill: SkillDefinition) => (
                 <div
                     key={skill.id}
+                    className="skills-tree-item-container"
                     style={{
                         gridColumn: skill.x + 1,
                         gridRow: skill.y + 1,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        zIndex: 1,
                     }}
                     data-id={skill.id}
                     data-parent-id={skill.parentId}

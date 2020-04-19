@@ -19,22 +19,15 @@ export default function SkillTreeItem(props: SkillTreeItemProps) {
 
     return (
         <button
+            className="skills-tree-item"
             title={readableName}
-            style={{
-                height: '4em',
-                width: '4em',
-                border: `2px solid ${props.unlocked ? '#3f4d6c' : '#49ffea'}`,
-                borderRadius: '0.5em',
-                padding: '0.3em',
-                background: '#252444',
-            }}
+            disabled={props.unlocked}
             onClick={onClick}
         >
             {props.skill.icon &&
                 <img
                     src={`/skills/${props.skill.icon}`}
                     alt={readableName}
-                    style={{ width: '100%' }}
                 />
             }
         </button>

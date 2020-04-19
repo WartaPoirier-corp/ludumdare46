@@ -1,0 +1,58 @@
+.skills-tree {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.skills-tree-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+@keyframes skill-bounce {
+    from {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.skills-tree-item {
+    height: 4em;
+    width: 4em;
+    border: 2px solid $cyan;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    background: $purple;
+
+    & > img {
+        width: 100%;
+    }
+
+    // Unlocked skill
+    &:disabled {
+        border-color: $lightpurple;
+    }
+
+    // Unlockable skill
+    &:not(:disabled) {
+        border-width: 3px;
+        transform: scale(1.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+        animation: skill-bounce normal 1s;
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}
