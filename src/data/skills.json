@@ -78,21 +78,21 @@
         "parentId": "root",
         "x": 1,
         "y": 3,
-        "name": "Hearing I"
+        "name": "Feelings Perception I"
     },
     {
         "id": "feelings-2",
         "parentId": "feelings-1",
         "x": 2,
         "y": 3,
-        "name": "Hearing II"
+        "name": "Feelings Perception II"
     },
     {
         "id": "feelings-3",
         "parentId": "feelings-2",
         "x": 3,
         "y": 3,
-        "name": "Hearing III"
+        "name": "Feelings Perception III"
     },
 
     {
