@@ -7,11 +7,13 @@ import MainScene from './scenes/MainScene';
 import Menu from './scenes/MenuScene';
 import SkillsTree from './scenes/SkillsTreeScene';
 import { default as store, State } from './store';
+import Tentacles from './components/Tentacles';
 
 export default function Game() {
     return (
         <ReduxProvider store={store}>
             <Router />
+            <Tentacles />
         </ReduxProvider>
     );
 }
