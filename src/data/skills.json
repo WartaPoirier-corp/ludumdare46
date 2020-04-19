@@ -4,7 +4,8 @@
         "parentId": null,
         "x": 0,
         "y": 2,
-        "name": "Exist"
+        "name": "Exist",
+        "description": "You exist. That's a good start. Now you can upgrade your connections to your host's brain to access information about their senses."
     },
 
     {
@@ -12,21 +13,24 @@
         "parentId": "root",
         "x": 1,
         "y": 0,
-        "name": "Smell I"
+        "name": "Smell I",
+        "description": "Allows you to know if a smell is strong or not."
     },
     {
         "id": "smell-2",
         "parentId": "smell-1",
         "x": 2,
         "y": 0,
-        "name": "Smell II"
+        "name": "Smell II",
+        "description": "Allows you to know if a smell is attractive or repulsive."
     },
     {
         "id": "smell-3",
         "parentId": "smell-2",
         "x": 3,
         "y": 0,
-        "name": "Smell III"
+        "name": "Smell III",
+        "description": "Allows you to know if your host smells a danger."
     },
 
     {
@@ -34,21 +38,24 @@
         "parentId": "root",
         "x": 1,
         "y": 1,
-        "name": "Vision I"
+        "name": "Vision I",
+        "description": "Allows you to know about the size of a shape."
     },
     {
         "id": "vision-2",
         "parentId": "vision-1",
         "x": 2,
         "y": 1,
-        "name": "Vision II"
+        "name": "Vision II",
+        "description": "Allows you to know if your host finds what they see familiar."
     },
     {
         "id": "vision-3",
         "parentId": "vision-2",
         "x": 3,
         "y": 1,
-        "name": "Vision III"
+        "name": "Vision III",
+        "description": "Allows you to have a short description of the object being seen."
     },
 
     {
@@ -56,21 +63,24 @@
         "parentId": "root",
         "x": 1,
         "y": 2,
-        "name": "Hearing I"
+        "name": "Hearing I",
+        "description": "Allows you to hear loud sounds."
     },
     {
         "id": "sound-2",
         "parentId": "sound-1",
         "x": 2,
         "y": 2,
-        "name": "Hearing II"
+        "name": "Hearing II",
+        "description": "Allows you to recognize sounds your host finds familiar."
     },
     {
         "id": "sound-3",
         "parentId": "sound-2",
         "x": 3,
         "y": 2,
-        "name": "Hearing III"
+        "name": "Hearing III",
+        "description": "Allows you to have a short description of the sound."
     },
 
     {
@@ -78,21 +88,24 @@
         "parentId": "root",
         "x": 1,
         "y": 3,
-        "name": "Feelings Perception I"
+        "name": "Feelings Perception I",
+        "description": "Allows you to know if your host is scared."
     },
     {
         "id": "feelings-2",
         "parentId": "feelings-1",
         "x": 2,
         "y": 3,
-        "name": "Feelings Perception II"
+        "name": "Feelings Perception II",
+        "description": "Allows you to know if your host is attracted towards something."
     },
     {
         "id": "feelings-3",
         "parentId": "feelings-2",
         "x": 3,
         "y": 3,
-        "name": "Feelings Perception III"
+        "name": "Feelings Perception III",
+        "description": "Allows you to know if your host is excited."
     },
 
     {
@@ -100,20 +113,23 @@
         "parentId": "root",
         "x": 1,
         "y": 4,
-        "name": "Physical Needs I"
+        "name": "Physical Needs I",
+        "description": "Allows you to know if your host is hungry."
     },
     {
         "id": "needs-2",
         "parentId": "needs-1",
         "x": 2,
         "y": 4,
-        "name": "Physical Needs II"
+        "name": "Physical Needs II",
+        "description": "Allows you to know if your host needs to use their restroom."
     },
     {
         "id": "needs-3",
         "parentId": "needs-2",
         "x": 3,
         "y": 4,
-        "name": "Physical Needs III"
+        "name": "Physical Needs III",
+        "description": "Allows you to know if you're horny or bored."
     }
 ]
