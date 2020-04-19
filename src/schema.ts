@@ -30,5 +30,4 @@ export interface SkillDefinition {
     x: number;
     y: number;
     name?: string;
-    icon?: string;
 }

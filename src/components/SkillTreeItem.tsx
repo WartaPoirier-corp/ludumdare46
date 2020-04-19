@@ -10,6 +10,7 @@ interface SkillTreeItemProps {
 
 export default function SkillTreeItem(props: SkillTreeItemProps) {
     const readableName = props.skill.name || props.skill.id;
+    const isRoot = !props.skill.parentId;
 
     const onClick = useCallback(() => {
         if (!props.unlocked) {
@@ -19,17 +20,17 @@ export default function SkillTreeItem(props: SkillTreeItemProps) {
 
     return (
         <button
-            className="skills-tree-item"
+            className={'skills-tree-item' + (isRoot ? ' root' : '')}
             title={readableName}
             disabled={props.unlocked}
             onClick={onClick}
         >
-            {props.skill.icon &&
+            {!isRoot && (
                 <img
-                    src={`/skills/${props.skill.icon}`}
+                    src={`/skills/${props.skill.id}.png`}
                     alt={readableName}
                 />
-            }
+            )}
         </button>
     );
 }
