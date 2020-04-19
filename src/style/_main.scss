@@ -52,8 +52,16 @@
     flex: 1;
     height: 16px;
     img {
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
+        display: block;
+        position: relative;
+        top: -16px;
+        border-radius: 32px;
+        border: 2px solid white;
+        padding: 4px;
+        left: 16px;
+        background: $darkpurple;
     }
 
     main {
@@ -68,9 +76,9 @@
 
 $gauges: (
   'hunger': red,
-  'mood': blue,
+  'mood': chartreuse,
   'energy': yellow,
-  'peepoo': chartreuse,
+  'peepoo': blue,
 );
 
 @each $name, $color in $gauges {
