@@ -5,6 +5,7 @@ import IconButton from '../components/IconButton';
 import { goTo } from '../store/actions/router';
 import { toggleSound, toggleMusic } from '../store/actions/settings';
 import { State } from '../store';
+import { muteMusic } from '../audio';
 
 export default function MenuScene() {
     const { soundOn, musicOn, host } = useSelector((state: State) => {
@@ -15,6 +16,9 @@ export default function MenuScene() {
         };
     });
     const dispatch = useDispatch();
+    React.useEffect(() => {
+        muteMusic(!musicOn);
+    }, [ musicOn ]);
 
     const newGame = React.useCallback(() => {
         dispatch(goTo('intro'));

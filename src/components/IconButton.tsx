@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStore } from 'react-redux';
+import { play } from '../audio';
 
 interface Props {
     on: Boolean;
@@ -21,6 +22,7 @@ export default function Button(props: Props = {
     const iconSrc = !!props.on ? props.iconOn: props.iconOff;
     const alt = !!props.on ? props.altOn : props.altOff;
     const onToggle = React.useCallback(() => {
+        play('/audio/click.mp3');
         if (props.onToggle) {
             props.onToggle(!props.on);
         }
