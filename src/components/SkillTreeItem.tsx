@@ -3,6 +3,7 @@ import { SkillDefinition } from '../schema';
 
 interface SkillTreeItemProps {
     skill: SkillDefinition;
+    unlocked: boolean;
 }
 
 export default function SkillTreeItem(props: SkillTreeItemProps) {
@@ -14,7 +15,7 @@ export default function SkillTreeItem(props: SkillTreeItemProps) {
             style={{
                 height: '4em',
                 width: '4em',
-                border: '2px solid #49ffea',
+                border: `2px solid ${props.unlocked ? '#3f4d6c' : '#49ffea'}`,
                 borderRadius: '0.5em',
                 padding: '0.3em',
                 background: '#252444',
