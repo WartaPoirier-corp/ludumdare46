@@ -14,13 +14,13 @@ export interface Host {
 export const initialState = {
     host: {} as Host,
     page: 'menu',
-    gauges: ['mood', 'energy', 'hunder', 'peepoo'].map(name => {
+    gauges: ['mood', 'energy', 'hunger', 'peepoo'].map(name => {
         return {
             value: INITIAL_GAUGE_VALUE,
             name,
         };
     }),
-    skills: [],
+    skills: ['mood', 'energy', 'hunger', 'peepoo'],
     musicOn: true,
     soundOn: true,
 };
