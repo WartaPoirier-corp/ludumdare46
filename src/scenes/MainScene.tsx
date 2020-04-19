@@ -1,8 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import IconButton from '../components/IconButton';
 import Button from '../components/Button';
 import { State } from '../store';
+import { goTo } from '../store/actions/router';
 
 export default function MainScene() {
     const { gauges, event } = useSelector((state: State) => {
@@ -15,18 +16,19 @@ export default function MainScene() {
             },
         };
     });
+    const dispatch = useDispatch();
+    const openMenu = React.useCallback(() => {
+        dispatch(goTo('menu'));
+    }, [dispatch])
     return (
         <div className="main-scene">
             <header>
                 <nav>
-                    <IconButton on={false} iconOn='/icons/menu.png' iconOff='/icons/menu.png' altOn='Menu' altOff='Menu' />
+                    <IconButton on={false} iconOn='/icons/menu.png' iconOff='/icons/menu.png' altOn='Menu' altOff='Menu' onToggle={openMenu} />
                 </nav>
                 <main>
                     {gauges.map(g => (<Gauge id={g.name} value={g.value} />))}                    
                 </main>
-                <nav>
-                    <IconButton on={false} iconOn='/icons/dna.png' iconOff='/icons/dna.png' altOn='Skills' altOff='Skills' />
-                </nav>
             </header>
             <main>
                 {event !== null ?
