@@ -71,6 +71,7 @@
         div {
             height: 16px;
             border-radius: 8px 0px 0px 8px;
+            transition: width 0.2s ease-in-out;
         }
     }
 }
