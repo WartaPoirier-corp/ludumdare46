@@ -1,0 +1,109 @@
+#app > .main-scene {
+    padding: 2em 5em;
+    width: calc(100vw - 10em);
+    height: calc(100vh - 4em);
+    header {
+        display: flex;
+        & > main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            margin: 0px 2em;
+            & > div {
+                display: flex;
+            }
+        }
+    }
+
+    & > main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > img {
+            display: block;
+            width: 200px;
+            margin: 3em auto;
+        }
+
+        & > section {
+            display: flex;
+            justify-content: space-around;
+
+            .card {
+                animation-name: float;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            .button {
+                flex: 1;
+                margin: 1em;
+            }
+        }
+
+        .description {
+            color: white;
+            text-align: center;
+            margin: 3em auto;
+        }
+    }
+}
+
+.gauge {
+    flex: 1;
+    height: 16px;
+    img {
+        width: 32px;
+        height: 32px;
+        display: block;
+        position: relative;
+        top: -16px;
+        border-radius: 32px;
+        border: 2px solid white;
+        padding: 4px;
+        left: 16px;
+        background: $darkpurple;
+    }
+
+    main {
+        border-radius: 8px;
+        flex: 1;
+        div {
+            height: 16px;
+            border-radius: 8px 0px 0px 8px;
+        }
+    }
+}
+
+$gauges: (
+  'hunger': red,
+  'mood': chartreuse,
+  'energy': yellow,
+  'peepoo': blue,
+);
+
+@each $name, $color in $gauges {
+    .gauge.#{$name} {
+        main {
+            background: mix($color, white, $weight: 25%);
+            div {
+                background: $color;
+            }    
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(20px, 15px);
+    }
+    75% {
+        transform: translate(15px, -5px);
+    }
+    100% {
+        transform: translate(-20px, -10px);
+    }
+}

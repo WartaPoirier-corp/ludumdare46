@@ -14,24 +14,23 @@ export default function MenuScene() {
             host: state.host,
         };
     });
-    console.log(soundOn, musicOn, host);
     const dispatch = useDispatch();
 
     const newGame = React.useCallback(() => {
         dispatch(goTo('intro'));
-    }, []);
+    }, [dispatch]);
     const resume = React.useCallback(() => {
         dispatch(goTo('main-scene'));
-    }, []);
+    }, [dispatch]);
     const credits = React.useCallback(() => {
         dispatch(goTo('credits'));
-    }, []);
+    }, [dispatch]);
     const toggleMusicCb = React.useCallback(() => {
         dispatch(toggleMusic())
-    }, []);
+    }, [dispatch]);
     const toggleSoundCb = React.useCallback(() => {
         dispatch(toggleSound())
-    }, []);
+    }, [dispatch]);
 
     return (
         <main className="menu">
