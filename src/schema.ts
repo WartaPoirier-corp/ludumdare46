@@ -27,7 +27,6 @@ export interface ActionOutcome {
 export interface SkillDefinition {
     id: string;
     parentId: string | null;
-    pointsToUnlock: number;
     x: number;
     y: number;
     name?: string;

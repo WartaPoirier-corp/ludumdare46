@@ -1,1 +1,119 @@
-[]
+[
+    {
+        "id": "root",
+        "parentId": null,
+        "x": 0,
+        "y": 2,
+        "name": "Exist"
+    },
+
+    {
+        "id": "smell-1",
+        "parentId": "root",
+        "x": 1,
+        "y": 0,
+        "name": "Smell I"
+    },
+    {
+        "id": "smell-2",
+        "parentId": "smell-1",
+        "x": 2,
+        "y": 0,
+        "name": "Smell II"
+    },
+    {
+        "id": "smell-3",
+        "parentId": "smell-2",
+        "x": 3,
+        "y": 0,
+        "name": "Smell III"
+    },
+
+    {
+        "id": "vision-1",
+        "parentId": "root",
+        "x": 1,
+        "y": 1,
+        "name": "Vision I"
+    },
+    {
+        "id": "vision-2",
+        "parentId": "vision-1",
+        "x": 2,
+        "y": 1,
+        "name": "Vision II"
+    },
+    {
+        "id": "vision-3",
+        "parentId": "vision-2",
+        "x": 3,
+        "y": 1,
+        "name": "Vision III"
+    },
+
+    {
+        "id": "sound-1",
+        "parentId": "root",
+        "x": 1,
+        "y": 2,
+        "name": "Hearing I"
+    },
+    {
+        "id": "sound-2",
+        "parentId": "sound-1",
+        "x": 2,
+        "y": 2,
+        "name": "Hearing II"
+    },
+    {
+        "id": "sound-3",
+        "parentId": "sound-2",
+        "x": 3,
+        "y": 2,
+        "name": "Hearing III"
+    },
+
+    {
+        "id": "feelings-1",
+        "parentId": "root",
+        "x": 1,
+        "y": 3,
+        "name": "Hearing I"
+    },
+    {
+        "id": "feelings-2",
+        "parentId": "feelings-1",
+        "x": 2,
+        "y": 3,
+        "name": "Hearing II"
+    },
+    {
+        "id": "feelings-3",
+        "parentId": "feelings-2",
+        "x": 3,
+        "y": 3,
+        "name": "Hearing III"
+    },
+
+    {
+        "id": "needs-1",
+        "parentId": "root",
+        "x": 1,
+        "y": 4,
+        "name": "Physical Needs I"
+    },
+    {
+        "id": "needs-2",
+        "parentId": "needs-1",
+        "x": 2,
+        "y": 4,
+        "name": "Physical Needs II"
+    },
+    {
+        "id": "needs-3",
+        "parentId": "needs-2",
+        "x": 3,
+        "y": 4,
+        "name": "Physical Needs III"
+    }
+]
