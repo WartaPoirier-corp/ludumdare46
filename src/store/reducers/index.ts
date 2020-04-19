@@ -22,8 +22,8 @@ export const initialState = {
         };
     }),
     skills: ['mood', 'energy', 'hunger', 'peepoo', 'vision-1', 'smell-1'],
-    musicOn: true,
-    soundOn: true,
+    musicOn: false,
+    soundOn: false,
     event: { actions: [], hints:[], description: '', } as Event,
 };
 export type State = typeof initialState;

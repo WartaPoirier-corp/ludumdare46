@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStore } from 'react-redux';
+import { play } from '../audio';
 
 interface Props {
     onClick?: () => void;
@@ -7,7 +8,11 @@ interface Props {
 }
 
 export default function Button(props: Props = {}) {
+    const onClick = React.useCallback(() => {
+        play('/audio/click.mp3');
+        props.onClick();
+    }, [props.onClick]);
     return (
-        <a className="button" href="#" {...props}>{props.children}</a>
+        <a className="button" href="#" onClick={onClick}>{props.children}</a>
     );
 }
