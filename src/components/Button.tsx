@@ -10,7 +10,7 @@ interface Props {
 export default function Button(props: Props = {}) {
     const onClick = React.useCallback(() => {
         play('/audio/click.mp3');
-        props.onClick();
+        props.onClick && props.onClick();
     }, [props.onClick]);
     return (
         <a className="button" href="#" onClick={onClick}>{props.children}</a>

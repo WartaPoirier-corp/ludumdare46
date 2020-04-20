@@ -4,6 +4,6 @@ export function setHost(animal) {
 }
 
 export const HANDLE_EVENT = 'HANDLE_EVENT';
-export function handleEvent(actionId) {
-    return { type: HANDLE_EVENT, actionId };
+export function handleEvent(act) {
+    return { type: HANDLE_EVENT, act };
 }

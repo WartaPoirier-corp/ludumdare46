@@ -1,7 +1,12 @@
 import { SET_HOST, HANDLE_EVENT } from '../actions/game';
-import { Host, State } from './';
+import { Host } from './';
 import { Event } from '../../schema';
-import allEvents from '../../data/events';
+import allEvents from '../../data/events.json';
+
+interface Gauge {
+    name: string;
+    value: Number;
+}
 
 export function hostReducer(state: Host = {}, action) {
     switch (action.type) {
@@ -10,14 +15,28 @@ export function hostReducer(state: Host = {}, action) {
     }
 }
 
+const GAUGES = [ 'mood', 'energy', 'health', 'hunger', 'peepoo', 'libido' ];
+const INITIAL_GAUGE_VALUE = {
+    otter: 0.9,
+    cat: 0.8,
+    dog: 0.66,
+    triceratops: -1,
+};
+
 export function gaugesReducer(gauges: Gauge[] = [], action) {
     console.log(gauges, action);
     switch (action.type) {
+        case SET_HOST:
+            return GAUGES.map(g => {
+                return {
+                    name: g,
+                    value: INITIAL_GAUGE_VALUE[action.animal]
+                };
+            });
         case HANDLE_EVENT:
             return gauges.map(g => {
-                const act = res.event.actions[action.actionId];
-                if (act != null && act.outcomes[g.name] != null) {
-                    g.value += act.outcomes[g.name];
+                if (action.act != null && action.act.outcomes[g.name] != null) {
+                    g.value += action.act.outcomes[g.name];
                 }
                 return g;
             });
@@ -25,7 +44,7 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
     }
 }
 
-export function eventReducer(state: Event = {}, action) {
+export function eventReducer(state: Event = { hints: [], actions: [], description: '' }, action) {
     switch (action.type) {
         case HANDLE_EVENT:
             return shuffle(allEvents)[0];

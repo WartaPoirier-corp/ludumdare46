@@ -14,16 +14,16 @@ export default function MainScene() {
             skills: state.skills,
         };
     });
-    if (gauges.some(x => x < 0)) {
+    const dispatch = useDispatch();
+    if (gauges.some(x => x.value < 0)) {
         dispatch(goTo('game-over'));
     }
-    const dispatch = useDispatch();
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));
     }, [dispatch]);
     const handle = React.useCallback((id) => {
-        dispatch(handleEvent(id))
-    }, [dispatch]);
+        dispatch(handleEvent(event.actions[id]))
+    }, [dispatch, event]);
 
     return (
         <div className="main-scene">
