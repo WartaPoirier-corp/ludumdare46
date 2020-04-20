@@ -34,11 +34,12 @@ export default function GameOverScene() {
 
         const emptyGaugesJoined = joinGauges(emptyGauges);
 
+        const isDino = state.host.animal === 'triceratops';
         return {
-            gauges,
+            gauges: isDino ? [] : gauges,
             emptyGauges,
-            emptyGaugesJoined,
-            lastMessage: state.lastOutcome,
+            emptyGaugesJoined: isDino ? 'all your gauges immediately' : emptyGaugesJoined,
+            lastMessage: isDino ? 'Your host has been dead for hundreds of millions of years, were you really hoping not to lose?' : state.lastOutcome,
         };
     }, [])
 
@@ -51,7 +52,7 @@ export default function GameOverScene() {
             <img src="game_over.png" alt=""/>
             <h1>You just lost. How sad...</h1>
             <h2>{gameInfo.lastMessage}</h2>
-            <p>...which made {gameInfo.emptyGaugesJoined} reach 0.</p>
+            <p>…which made {gameInfo.emptyGaugesJoined} reach zero.</p>
             <div className="gauges">
                 {gameInfo.gauges.map((gauge) => (
                     <Gauge
@@ -61,7 +62,7 @@ export default function GameOverScene() {
                     />
                 ))}
             </div>
-            <Button onClick={next}>OK</Button>
+            <Button onClick={next}>Okay</Button>
         </div>
     );
 }
