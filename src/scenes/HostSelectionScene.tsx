@@ -9,7 +9,7 @@ export default function HostSelectionScene() {
     const dispatch = useDispatch();
     const choices = [
         {
-            name: 'Otter : easy',
+            name: 'Otter : tutorial',
             id: 'otter',
             icon: '/animals/otter.png',
             description: `
@@ -19,7 +19,7 @@ export default function HostSelectionScene() {
                 if it's the first time I travel to Earth.`
         },
         {
-            name: 'Cat : medium',
+            name: 'Cat : easy',
             id: 'cat',
             icon: '/animals/cat.png',
             description:
@@ -38,7 +38,7 @@ export default function HostSelectionScene() {
                 not be discovered. I need to be extremely careful if I chose this one.`
         },
         {
-            name: 'Triceratops : hardcore',
+            name: 'Triceratops : impossible',
             id: 'triceratops',
             icon: '/animals/triceratops.png',
             description:
