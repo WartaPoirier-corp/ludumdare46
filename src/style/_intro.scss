@@ -1,0 +1,33 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+        z-index: 1;
+    }
+
+    & > a {
+        background: rgba($purple, 0.8);
+    }
+}
+
+.intro-text {
+    margin: 2em 5em;
+
+    font-size: large;
+    color: white;
+
+    text-shadow: 0 0 8px #16142f, 0 0 4px #16142f, 0 0 2px #16142f;
+
+    & > p {
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .intro-text {
+        max-width: 600px;
+        padding: 2em;
+    }
+}
