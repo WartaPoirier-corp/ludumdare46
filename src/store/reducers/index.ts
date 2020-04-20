@@ -24,7 +24,7 @@ export const initialState = {
     }),
     points: 0,
     totalScore: 0,
-    skills: [ 'vision-1' ],
+    skills: [ 'vision-1', 'sound-1', 'feelings-1', 'needs-1', 'smell-1' ],
     musicOn: false,
     soundOn: false,
     event: { actions: [], hints:[], description: '', } as Event,
