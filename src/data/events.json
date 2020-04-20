@@ -11,8 +11,8 @@
         {"category": "smell-2", "description": "It's a foul smell."}
       ],
       "actions": [
-        { "title": "Eat", "outcomes": { "mood": -0.1, "health": -0.2, "suspicion": -0.2, "hunger": 0.1 }, "endMsg":"You've eaten your own litter"},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": -0.1 } , "endMsg":"You have fiercely attacked your litter box"},
+        { "title": "Eat", "outcomes": { "mood": -0.2, "health": -0.2, "suspicion": -0.2, "hunger": 0.1 }, "endMsg":"You've eaten your own litter"},
+        { "title": "Attack", "outcomes": { "energy": -0.2, "suspicion": -0.1 } , "endMsg":"You have fiercely attacked your litter box"},
         { "title": "Relieve yourself", "outcomes": { "peepoo": 0.2, "health": 0.1, "suspicion": 0.05, "mood": 0.1 } , "endMsg":"You defacated in your litter box."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg":"You did nothing in front of your litter box"}
       ]
@@ -33,8 +33,8 @@
       ],
       "actions": [
         { "title": "Eat", "outcomes": { "mood": 0.3, "hunger": 0.5, "energy" : 0.5, "peepoo": -0.1, "health": 0.1 }, "endMsg":"You've eaten your bowl."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": -0.1 } , "endMsg":"You have fiercely attacked your bowl."},
-        { "title": "Relieve yourself", "outcomes": { "mood": -0.1, "peepoo": 0.3, "suspicion": -0.1, "health": -0.1, "hunger": -0.05, "libido": -0.1 } , "endMsg":"You've relieved yourself in your bowl."},
+        { "title": "Attack", "outcomes": { "energy": -0.2, "suspicion": -0.1 } , "endMsg":"You have fiercely attacked your bowl."},
+        { "title": "Relieve yourself", "outcomes": { "mood": -0.2, "peepoo": 0.3, "suspicion": -0.25, "health": -0.1, "hunger": -0.05, "libido": -0.1 } , "endMsg":"You've relieved yourself in your bowl."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You've done nothing in front of your bowl."}
       ]
     },
@@ -55,7 +55,7 @@
       ],
       "actions": [
         { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": 0.05 } , "endMsg":"You have fiercely attacked a mirror."},
-        { "title": "Flee", "outcomes": { "energy" : -0.1, "mood" : -0.1,"suspicion": 0.05 } , "endMsg":"You ran away from your reflection in a mirror."},
+        { "title": "Flee", "outcomes": { "energy" : -0.1, "mood" : -0.15,"suspicion": 0.05 } , "endMsg":"You ran away from your reflection in a mirror."},
         { "title": "Seduce", "outcomes": { "suspicion": -0.1 }, "endMsg": "You tried to seduce a mirror."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You did nothing in front of your reflection in a mirror."}
       ]
@@ -75,7 +75,7 @@
       "actions": [
         { "title": "Eat", "outcomes": { "mood": -0.05, "hunger": 0.1, "suspicion": -0.1 }, "endMsg": "You ate a bug."},
         { "title": "Attack", "outcomes": { "energy": -0.1, "mood": 0.2, "suspicion": 0.05 } , "endMsg": "You've been playing with a bug."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "mood": -0.1 } , "endMsg": "You ran away from a bug."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "mood": -0.15 } , "endMsg": "You ran away from a bug."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You did nothing about the bug in front of you."}
       ]
     },
@@ -93,7 +93,7 @@
       "actions": [
         { "title": "Scratch", "outcomes": { "mood": 0.1, "hunger": -0.05 }, "endMsg": "You scratched your basket."},
         { "title": "Sleep", "outcomes": { "energy": 0.9, "mood": 0.3, "hunger": -0.05, "health": 0.3, "suspicion": 0.05, "peepoo": -0.1 } , "endMsg": "You slept on your basket."},
-        { "title": "Relieve yourself", "outcomes": { "mood": -0.1, "suspicion": -3 } , "endMsg": "You defecated on your basket."},
+        { "title": "Relieve yourself", "outcomes": { "mood": -0.2, "suspicion": -0.25 } , "endMsg": "You defecated on your basket."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You did nothing in front of your basket."}
       ]
     },
@@ -112,7 +112,7 @@
       "actions": [
         { "title": "Scratch", "outcomes": { "energy": -0.05, "hunger": -0.05 }, "endMsg": "You scratched a door."},
         { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": -0.1, "hunger": -0.1 } , "endMsg": "You attacked a door."},
-        { "title": "Relieve yourself", "outcomes": { "suspicion": -0.1, "peepoo": 0.2, "mood": 0.1 } , "endMsg": "You relieved yourself in front of the door."},
+        { "title": "Relieve yourself", "outcomes": { "suspicion": -0.15, "peepoo": 0.2, "mood": 0.1 } , "endMsg": "You relieved yourself in front of the door."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You did nothing in front of the door."}
       ]
     }, 
@@ -135,8 +135,8 @@
       ],
       "actions": [
         { "title": "loud meow", "outcomes": { "energy": -0.05, "mood": 0.1, "suspicion": 0.05, "hunger": -0.05 }, "endMsg": "You meowed in front of your master."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": -0.1, "mood": -0.1 } , "endMsg": "You attacked your master."},
-        { "title": "Relieve yourself", "outcomes": { "suspicion": -0.1 } , "endMsg": "You relieved yourself on your master."},
+        { "title": "Attack", "outcomes": { "energy": -0.1, "suspicion": -0.15, "mood": -0.15 } , "endMsg": "You attacked your master."},
+        { "title": "Relieve yourself", "outcomes": { "suspicion": -0.2 } , "endMsg": "You relieved yourself on your master."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05}, "endMsg": "You did nothing in front of your master."}
       ]
     },
@@ -154,10 +154,10 @@
       ],
       "actions": [
         { "title": "Seduce", "outcomes": { "libido": 0.3, "energy": -0.05, "hunger": -0.05, "suspicion": -0.2, "mood": 0.1}, "endMsg":"You seduced a guinea pig, uh."},
-        { "title": "Eat", "outcomes": { "libido": -0.1, "hunger": 0.2, "peepoo": -0.05 }, "endMsg":"You've eaten a guinea pig."},
+        { "title": "Eat", "outcomes": { "libido": -0.1, "hunger": 0.2, "peepoo": -0.05 , "suspicion": -0.35}, "endMsg":"You've eaten a guinea pig."},
         { "title": "Attack", "outcomes": { "suspicion": -0.1, "energy": -0.1, "mood": -0.1 } , "endMsg":"You have fiercely attacked a guinea pig."},
         { "title": "Relieve yourself", "outcomes": { "peepoo": 0.2, "libido": -0.1, "suspicion": -0.1 } , "endMsg":"You defacated on a guinea pig."},
-        { "title": "Flee", "outcomes": { "libido": -0.1, "hunger": 0.2, "peepoo": - 0.05 }, "endMsg":"You flew in front of a guinea pig."},
+        { "title": "Flee", "outcomes": { "libido": -0.1, "peepoo": - 0.05 }, "endMsg":"You flew in front of a guinea pig."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05 }, "endMsg":"You did nothing in front of a guinea pig."}
       ]
     },
@@ -167,7 +167,6 @@
       "description": "You're walking past something.",
       "hints": [
         {"category": "vision-1", "description": "You recognize a little thing."},
-        {"category": "vision-2", "description": "This little shape seems familiar to you."},
         {"category": "vision-3", "description": "You can see some bottles"},
         
         {"category": "smell-1", "description": "You can tell a smell."},
@@ -175,9 +174,9 @@
         {"category": "smell-3", "description": "You can smell a danger."}
       ],
       "actions": [
-        { "title": "Eat", "outcomes": { "health": -1 }, "endMsg":"You've eaten household products."},
-        { "title": "Meow", "outcomes": { "hunger": -0.05, "energy": -0.05, "suspicion": 0.05, "mood":-0.05 } , "endMsg":"You meowed in front of household products."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05 }, "endMsg":"You flew in front of household products."},
+        { "title": "Eat", "outcomes": { "health": -0.8, "mood" : 0.02 }, "endMsg":"You've eaten household products."},
+        { "title": "Meow", "outcomes": { "hunger": -0.05, "energy": -0.05, "suspicion": 0.05} , "endMsg":"You meowed in front of household products."}, 
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05, "mood": -0.05  }, "endMsg":"You flew in front of household products."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You did nothing in front of household products."}
       ]
     },
@@ -188,7 +187,7 @@
       "hints": [
         {"category": "mood-1", "description": "You're fearful in front of this situation."},
         
-        {"category": "vision-2", "description": "This shape seems familiar to you."},
+        {"category": "vision-2", "description": "It's alive."},
         {"category": "vision-3", "description": "You can see a congener"},
         
         {"category": "smell-1", "description": "You can tell a smell."},
@@ -200,9 +199,10 @@
         {"category": "sound-3", "description": "It's some grunts."}
       ],
       "actions": [
-        { "title": "Seduce", "outcomes": { "health": -0.2,"libido":-0.1,"mood":-0.1}, "endMsg":"You tried to seduce an aggressive cat."},
-        { "title": "Attack", "outcomes": { "hunger": -0.1, "energy": -0.1, "mood": 0.1 } , "endMsg":"You attacked an aggressive cat."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of an aggressive cat."}
+        { "title": "Seduce", "outcomes": { "health": -0.2,"libido":-0.1,"mood":-0.2}, "endMsg":"You tried to seduce an aggressive cat."},
+        { "title": "Attack", "outcomes": { "hunger": -0.1, "energy": -0.15, "mood": 0.1 } , "endMsg":"You attacked an aggressive cat."}, 
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of an aggressive cat."},
+        { "title": "Do nothing", "outcomes": { "health": -0.2, "hunger": -0.05, "mood": -0.2, "energy": -0.05 }, "endMsg":"you didn't defend yourself against an aggressive cat"}
         
       ]
     },
@@ -214,7 +214,7 @@
         {"category": "mood-2", "description": "You're attracted to what you see."},
         {"category": "mood-3", "description": "You're excited about what you see."},
         
-        {"category": "vision-2", "description": "This little shape seems familiar to you."},
+        {"category": "vision-2", "description": "It's alive."},
         {"category": "vision-3", "description": "You can see a congener."},
         
         {"category": "smell-1", "description": "You can tell a smell."},
@@ -225,9 +225,10 @@
         {"category": "sound-3", "description": "You can hear a meow"}
       ],
       "actions": [
-        { "title": "Seduce", "outcomes": { "hunger": -0.05, "energy": -0.1, "libido": 0.2 } , "endMsg": "You tried to seduce a nice cat."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": 0.1 }, "endMsg":"You flew in front of a nice cat."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1 }, "endMsg":"You attacked a nice cat."}
+        { "title": "Seduce", "outcomes": { "hunger": -0.05, "libido": 0.3 } , "endMsg": "You tried to seduce a nice cat."}, 
+        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.15 }, "endMsg":"You attacked a nice cat."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of a nice cat."},
+        { "title": "Do nothing", "outcomes": { "health": -0.2, "hunger": -0.05, "mood": -0.2, "energy": -0.05 }, "endMsg":"you did nothing in front of a nice cat"}
       ]
     },
     {
@@ -243,8 +244,8 @@
 				{"category": "smell-2", "description": "You can smell a stench."}
       ],
       "actions": [
-        { "title": "Seduce", "outcomes": { "hunger": -0.05, "energy": -0.1, "libido": -0.1, "mood": -0.1, "suspicion": -0.1 } , "endMsg": "You tried to seduce a trash can."}, 
-        { "title": "Eat", "outcomes": { "hunger": 0.3, "peepoo": -0.05, "health": -0.05 }, "endMsg":"You just eat some pieces of trash in a trash can."},
+        { "title": "Seduce", "outcomes": { "hunger": -0.05, "energy": -0.1, "libido": -0.1, "mood": -0.1, "suspicion": -0.15 } , "endMsg": "You tried to seduce a trash can."}, 
+        { "title": "Eat", "outcomes": { "hunger": 0.3, "peepoo": -0.4, "health": -0.15 }, "endMsg":"You just eat some pieces of trash in a trash can."},
         { "title": "Relieve yourself", "outcomes": { "peepoo": 0.2, "mood": 0.1 }, "endMsg":"You relieve yourself in front of a trash can."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05 }, "endMsg": "You did nothing in front of a trash can"}      
       ]
@@ -255,7 +256,7 @@
       "description": "Something is coming.",
       "hints": [
         {"category": "vision-1", "description": "You recognize a big shape"},
-        {"category": "vision-2", "description": "This little shape seems familiar to you."},
+        {"category": "vision-2", "description": "This shape seems familiar to you."},
         {"category": "vision-3", "description": "You can see a little humain"},
         {"category": "sound-1", "description": "You can hear some noises."},
 				{"category": "sound-2", "description": "You can hear a familiar noise."},
@@ -263,8 +264,8 @@
       ],
       "actions": [
         { "title": "Loud meow", "outcomes": { "hunger": -0.05, "energy": -0.05, "mood": 0.1, "suspicion": 0.05 } , "endMsg": "You meowed in front of children."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of children."},
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "suspicion": -0.1 }, "endMsg":"You attacked children."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of children."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05 }, "endMsg": "You did nothing in front of children"}
       ]
     },
@@ -274,6 +275,7 @@
       "description": "Something is coming.",
       "hints": [
         {"category": "vision-1", "description": "You recognize a big shape."},
+        {"category": "vision-1", "description": "It's alive."},
         {"category": "vision-3", "description": "This looks like a cat, but bigger."},
         {"category": "smell-1", "description": "You can smell a strong smell"},
         {"category": "smell-3", "description": "You can smell a danger."},
@@ -282,9 +284,9 @@
         {"category": "sound-3", "description": "You can ear some grunts."}
       ],
       "actions": [
-        { "title": "Seduce", "outcomes": { "health": -0.2, "libido": -0.1, "mood": -0.1, "suspicion": -0.05 } , "endMsg": "You tried to seduce a dog."}, 
+        { "title": "Seduce", "outcomes": { "health": -0.2, "libido": -0.1, "mood": -0.15, "suspicion": -0.05 } , "endMsg": "You tried to seduce a dog, but it attacked you."}, 
+        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "health": -0.1 }, "endMsg":"You attacked a dog, and it fought back."},
         { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1, "suspicion": 0.05}, "endMsg":"You flew in front of a dog."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": 0.1, "health": -0.1 }, "endMsg":"You attacked a dog."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05 }, "endMsg": "You did nothing in front of a dog"}
       ]
     },
@@ -294,7 +296,7 @@
       "description": "Something is coming.",
       "hints": [
         {"category": "vision-1", "description": "You recognize a small shape."},
-        {"category": "vision-2", "description": "This little shape seems familiar to you."},
+        {"category": "vision-2", "description": "It's alive."},
         {"category": "vision-3", "description": "You can see a grey and small thing."},
         {"category": "smell-1", "description": "You can smell a strong smell."},
 				{"category": "smell-2", "description": "You can tell it's an enticing smell."},
@@ -305,7 +307,8 @@
       ],
       "actions": [
         { "title": "Eat", "outcomes": { "energy": 0.2, "hunger": 0.3, "mood": 0.1, "suspicion": 0.05 }, "endMsg":"You ate a bird."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": 0.1 }, "endMsg":"You attacked a bird."},
+        { "title": "Attack", "outcomes": { "energy": 0.05, "hunger": 0.3, "mood": 0.2, "suspicion": 0.05 }, "endMsg":"You attacked a bird. And after playing with it, you ended up eating it."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1 }, "endMsg":"You attacked a bird. "},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05 }, "endMsg": "You did nothing in front of a bird"}
       ]
     },
@@ -315,7 +318,7 @@
       "description": "Something is coming.",
       "hints": [
         {"category": "vision-1", "description": "You recognize a small shape."},
-        {"category": "vision-2", "description": "This little shape seems familiar to you."},
+        {"category": "vision-2", "description": "It's alive."},
         {"category": "vision-3", "description": "You can see a grey and small thing."},
         {"category": "smell-1", "description": "You can smell a strong smell."},
 				{"category": "smell-2", "description": "You can tell it's an enticing smell."},
@@ -325,9 +328,9 @@
         {"category": "mood-3", "description": "You're excited about what you see'."}
       ],
       "actions": [
-        { "title": "Loud meow", "outcomes": { "energy": -0.05, "hunger": -0.05, "suspicion": 0.05}, "endMsg": "You meowed in front of a mouse."},
         { "title": "Eat", "outcomes": { "energy": 0.2, "hunger": 0.3, "mood": 0.1, "suspicion": 0.05 }, "endMsg":"You ate a mouse."},
-        { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": 0.1, "suspicion": 0.05 }, "endMsg":"You attacked a mouse."},
+        { "title": "Attack", "outcomes": { "energy": 0.05, "hunger": 0.3, "mood": 0.2, "suspicion": 0.05 }, "endMsg":"You attacked a mouse. And after playing with it, you ended up eating it."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1}, "endMsg": "You flew in front of a stone."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.05 }, "endMsg": "You did nothing in front of a mouse"}
       ]
     },
@@ -340,13 +343,63 @@
         {"category": "vision-3", "description": "You can see a grey and small thing."}
       ],
       "actions": [
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -01}, "endMsg": "You flew in front of a stone."},
-        { "title": "Eat", "outcomes": { "health": -0.2, "hunger": -0.05, "mood": -0.1, "suspicion": -0.05 }, "endMsg":"You tried to eat a stone."},
+        { "title": "Eat", "outcomes": { "health": -0.2, "hunger": -0.05, "mood": -0.15, "suspicion": -0.1 }, "endMsg":"You tried to eat a stone."},
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "suspicion": -0.1 }, "endMsg":"You attacked a stone."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1}, "endMsg": "You flew in front of a stone."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.05, "suspicion": 0.05 }, "endMsg": "You did nothing in front of a stone"}
       ]
     },
+      {
+      "animals": [ "cat" ],
+      "require" : "vision-3",
+      "comment": "Des fdp avec un bout de bois",
+      "description": "",
+      "hints": [ {"category": "vision-3", "description": "Wicked humans attack you with a stick ! What do you do ?"}],
+      "actions": [
+        { "title": "Flee", "outcomes": { "energy": -0.2, "hunger": -0.2, "mood": -0.3, "health": -0.1}, "endMsg": "You managed to escape them, but you took some hits nonetheless."},
+  			{ "title": "Fight back", "outcomes": { "energy": -0.1, "hunger": -0.2, "health": -0.3}, "endMsg": "They quickly stopped when you attacked them, but you took some bad hits."}
+      ]
+    },
+      {
+      "animals": [ "cat" ],
+      "require" : "vision-3",
+      "comment": "Oiseau derrière barrière 1 - bon",
+      "description": "",
+      "hints": [
+        {"category": "vision-3", "description": "You see a bird drinking water in a little puddle, a big fence separates you from it. What do you do ?"}
+      ],
+      "actions": [
+        { "title": "Jump over the fence", "outcomes": { "energy" : 0.2, "hunger": 0.5}, "endMsg": "You managed to jump over the fence, and you were too quick for the bird."},
+  			{ "title": "Do nothing", "outcomes": { "mood":-0.15 }, "endMsg": "You let the bird go."}
+      ]
+    },
+      {
+      "animals": [ "cat" ],
+      "require" : "vision-3",
+      "comment": "Oiseau derrière barrière 2 - mauvais",
+      "description": "",
+      "hints": [
+        {"category": "vision-3", "description": "You see a bird drinking water in a little puddle, a big fence separates you from it. What do you do ?"}
+      ],
+      "actions": [
+        { "title": "Jump over the fence", "outcomes": { "mood" : -0.2, "energy": -0.1, "health": -0.1}, "endMsg": "Ouch ! You tried to jump over the fence, but that didn't go well. You fell from a height."},
+  			{ "title": "Do nothing", "outcomes": { "mood":-0.15 }, "endMsg": "You let the bird go."}
+      ]
+    },
   
+    {
+      "animals": [ "cat" ],
+      "require" : "sound-3",
+      "comment": "Oiseau derrière barrière 3 - mauvais",
+      "description": "",
+      "hints": [
+        {"category": "sound-3", "description": "You hear a "},
+      ],
+      "actions": [
+        { "title": "Jump over the fence", "outcomes": { "mood" : -0.2, "energy": -0.1, "health": -0.1}, "endMsg": "Ouch ! You tried to jump over the fence, but that didn't go well. You fell from a height."},
+  			{ "title": "Do nothing", "outcomes": { "mood":-0.15 }, "endMsg": "You let the bird go."}
+      ]
+    },
   
     {
       "animals": [ "dog" ],
@@ -393,7 +446,7 @@
       "hints": [
         {"category": "vision-1", "description": "You can see a big shape"},
         {"category": "vision-2", "description": "You can see a big and yellow shape."},
-        {"category": "vision-2", "description": "You can see a big and yellow shape with wheels."},
+        {"category": "vision-3", "description": "You can see a big and yellow shape with wheels."},
         {"category": "smell-1", "description": "You can tell a strong smell."},
 				{"category": "smell-2", "description": "You can smell a humain."},
         {"category": "smell-3", "description": "There is no danger with this thing."}
@@ -803,8 +856,8 @@
       ],
       "actions": [
         { "title": "Eat", "outcomes": { "hunger": 0.2, "energy": 0.2, "mood": 0.2 }, "endMsg":"You ate seashells"},
-        { "title": "Do nothing", "outcomes": { "mood": -0.05, "hunger": -0.05 } , "endMsg":"You did nothing in front of seashells."},
-        { "title": "Flee", "outcomes": { "energy": -0.05, "mood": 0.1, "hunger": 0.2 } , "endMsg":"You fled in front of seashells."}
+        { "title": "Flee", "outcomes": { "energy": -0.05, "mood": 0.1, "hunger": 0.2 } , "endMsg":"You fled in front of seashells."},
+        { "title": "Do nothing", "outcomes": { "mood": -0.05, "hunger": -0.05 } , "endMsg":"You did nothing in front of seashells."}
       ]
     },
   	{
@@ -818,10 +871,10 @@
         {"category": "vision-3", "description": "You observe a big box moving quickly"}
       ],
       "actions": [
-        { "title": "Approcher", "outcomes": { "health": -1 }, "endMsg":"You tried to approach a moving car"},
-        { "title": "Do nothing", "outcomes": { "mood": -0.05, "hunger": -0.02 } , "endMsg":"You did nothing when a car passed."},
+        { "title": "Approach", "outcomes": { "health": -1 }, "endMsg":"You tried to approach a moving car"},
         { "title": "Flee", "outcomes": { "mood": -0.05, "hunger": -0.05, "energy": -0.05 } , "endMsg":"You fled in front of seashells."},
-        { "title": "Seduce", "outcomes": { "health": -1 } , "endMsg":"You tried to seduce a car, without much success."}
+        { "title": "Seduce", "outcomes": { "health": -1 } , "endMsg":"You tried to seduce a car, without much success."},
+        { "title": "Do nothing", "outcomes": { "mood": -0.05, "hunger": -0.02 } , "endMsg":"You did nothing when a car passed."}
       ]
     }
 ]
