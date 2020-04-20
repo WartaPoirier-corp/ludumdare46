@@ -52,8 +52,14 @@ export default function MainScene() {
                                           animationDuration: `${5 + Math.floor(Math.random() * 10)}s` }}
                                           className="card"
                                           key={i}
-                                        >{h.description}
-                                        </div>)
+                                      >
+                                        <img
+                                            className={`icon ${h.category.slice(0, -2)}`}
+                                            src={`/skills/${h.category}.png`}
+                                            title={`Provided by ${h.category}`}
+                                            alt={`Provided by ${h.category} :`} />
+                                        <span>{h.description}</span>
+                                    </div>)
                                 )}
                         </section>
                         <div className="illus">

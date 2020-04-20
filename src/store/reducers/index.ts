@@ -23,7 +23,7 @@ export const initialState = {
         };
     }),
     points: 0,
-    skills: [],
+    skills: [ 'vision-1' ],
     musicOn: false,
     soundOn: false,
     event: { actions: [], hints:[], description: '', } as Event,

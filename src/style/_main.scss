@@ -1,3 +1,18 @@
+$gauges: (
+  'hunger': red,
+  'mood': chartreuse,
+  'energy': yellow,
+  'peepoo': blue,
+);
+
+$skills: (
+  'feelings': purple,
+  'needs': blue,
+  'smell': green,
+  'sound': orange,
+  'vision': turquoise,
+);
+
 #app > .main-scene {
     padding: 2em 5em;
     width: auto;
@@ -37,6 +52,29 @@
                 animation-name: float;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                align-items: center;
+                overflow: hidden;
+
+                .icon {
+                    display: inline;
+                    padding: 16px;
+                    margin: 0px;
+                    max-width: 32px;
+                    height: calc(100% - 32px);
+
+                    @each $name, $color in $skills {
+                        &.#{$name} {
+                            background: $color;
+                        }
+                    }
+                }
+
+                span {
+                    margin: 1em;
+                }
             }
 
             .button {
@@ -80,13 +118,6 @@
         }
     }
 }
-
-$gauges: (
-  'hunger': red,
-  'mood': chartreuse,
-  'energy': yellow,
-  'peepoo': blue,
-);
 
 @each $name, $color in $gauges {
     .gauge.#{$name} {
