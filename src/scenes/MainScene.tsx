@@ -45,9 +45,9 @@ export default function MainScene() {
     }, [dispatch]);
 
     const handle = React.useCallback((id) => {
-        dispatch(handleEvent(event.actions[id], host.animal));
+        dispatch(handleEvent(event.actions[id], host.animal, skills));
         dispatch(incrementPoints());
-    }, [dispatch, event, host]);
+    }, [dispatch, event, host, skills]);
 
     const nextEvent = React.useCallback(() => {
         dispatch(clearOutcome());
