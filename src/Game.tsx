@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
-import Tentacles from './components/Tentacles';
 import Credits from './scenes/CreditsScene';
 import GameOverScene from './scenes/GameOverScene';
 import HostSelection from './scenes/HostSelectionScene';
@@ -14,7 +13,6 @@ export default function Game() {
     return (
         <ReduxProvider store={store}>
             <Router />
-            <Tentacles />
         </ReduxProvider>
     );
 }

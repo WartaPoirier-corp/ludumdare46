@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '../components/Button';
 import IconButton from '../components/IconButton';
+import Tentacles from '../components/Tentacles';
 import { goTo } from '../store/actions/router';
 import { toggleSound, toggleMusic } from '../store/actions/settings';
 import { State } from '../store';
@@ -40,6 +41,8 @@ export default function MenuScene() {
     }, [dispatch]);
 
     return (
+        <>
+        <Tentacles />
         <main className="menu">
             <header>
                 <img src="/icons/title.png" alt="The Parasist logo"/>
@@ -67,5 +70,6 @@ export default function MenuScene() {
                     onToggle={toggleSoundCb}/>
             </footer>
         </main>
+        </>
     );
 }
