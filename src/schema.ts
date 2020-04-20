@@ -3,6 +3,7 @@ export interface Event {
     actions: Action[];
     description: string;
     requires?: string[];
+    animals: string[],
 }
 
 export interface Hint {

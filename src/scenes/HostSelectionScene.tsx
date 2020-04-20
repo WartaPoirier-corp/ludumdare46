@@ -36,7 +36,7 @@ export default function HostSelectionScene() {
     const go = (id) => React.useCallback(() => {
         play(`/audio/${id}.mp3`);
         dispatch(setHost(id));
-        dispatch(handleEvent(0)); // generate a first event
+        dispatch(handleEvent(0, id)); // generate a first event
         dispatch(goTo('main-scene'));
     }, []);
 

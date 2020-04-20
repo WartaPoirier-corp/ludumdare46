@@ -34,7 +34,6 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
             });
         case HANDLE_EVENT:
             return gauges.map(g => {
-                console.log(action);
                 if (action.act != null && action.act.outcomes != null && action.act.outcomes[g.name] != null) {
                     g.value += action.act.outcomes[g.name];
                 }
@@ -44,10 +43,10 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
     }
 }
 
-export function eventReducer(state: Event = { hints: [], actions: [], description: '' }, action) {
+export function eventReducer(state: Event = { hints: [], actions: [], description: '', animals: [] }, action) {
     switch (action.type) {
         case HANDLE_EVENT:
-            return shuffle(allEvents)[0];
+            return shuffle(allEvents).find(x => x.animals.includes(action.host)) || null;
         default: return state;
     }
 }

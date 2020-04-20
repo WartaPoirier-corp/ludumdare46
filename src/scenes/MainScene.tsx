@@ -7,11 +7,12 @@ import { goTo } from '../store/actions/router';
 import { handleEvent } from '../store/actions/game';
 
 export default function MainScene() {
-    const { gauges, event, skills } = useSelector((state: State) => {
+    const { gauges, event, skills, host } = useSelector((state: State) => {
         return {
             gauges: state.gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo'),
             event: state.event,
             skills: state.skills,
+            host: state.host,
         };
     });
     const dispatch = useDispatch();
@@ -24,8 +25,8 @@ export default function MainScene() {
         dispatch(goTo('menu'));
     }, [dispatch]);
     const handle = React.useCallback((id) => {
-        dispatch(handleEvent(event.actions[id]))
-    }, [dispatch, event]);
+        dispatch(handleEvent(event.actions[id], host.animal))
+    }, [dispatch, event, host]);
 
     return (
         <div className="main-scene">
