@@ -36,6 +36,9 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
             return gauges.map(g => {
                 if (action.act != null && action.act.outcomes != null && action.act.outcomes[g.name] != null) {
                     g.value += action.act.outcomes[g.name];
+                    if (g.value > 1) {
+                        g.value = 1;
+                    }
                 }
                 return g;
             });
