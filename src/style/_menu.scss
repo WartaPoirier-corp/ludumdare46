@@ -3,6 +3,12 @@
     padding: 5em;
     width: auto;
 
+    header img {
+        display: block;
+        max-width: 40vw;
+        margin: 1em auto;
+    }
+
     section, footer {
         max-width: 20vw;
         margin: 1em auto;
@@ -11,5 +17,14 @@
     footer {
         display: flex;
         justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #app > .menu {
+        padding: 1em;
+        section, footer, header img {
+            max-width: 90vw;
+        }
     }
 }

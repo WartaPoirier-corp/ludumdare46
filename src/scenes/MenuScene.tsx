@@ -38,6 +38,9 @@ export default function MenuScene() {
 
     return (
         <main className="menu">
+            <header>
+                <img src="/icons/title.png" alt="The Parasist logo"/>
+            </header>
             <section>
                 <Button onClick={newGame}>New game</Button>
                 {host.animal ? <Button onClick={resume}>Resume game</Button> : null}

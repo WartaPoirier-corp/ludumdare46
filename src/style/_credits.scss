@@ -1,9 +1,10 @@
-.credits {
+#app > .credits {
     background: $darkpurple;
     color: white;
     line-height: 1.33em;
     padding: 5em;
     height: calc(100vh - 10em);
+    width: auto;
 
     & > * {
         margin: 1em auto;
@@ -21,5 +22,18 @@
 
     ul {
         padding-left: 2em;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #app > .credits {
+        padding: 1em;
+        & > * {
+            max-width: 90vw;
+        }
+
+        .button {
+            max-width: 90vw;
+        }
     }
 }
