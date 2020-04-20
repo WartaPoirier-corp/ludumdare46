@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import IconButton from '../components/IconButton';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../components/Button';
+import Gauge from '../components/Gauge';
+import IconButton from '../components/IconButton';
 import { State } from '../store';
+import { handleEvent } from '../store/actions/game';
 import { goTo } from '../store/actions/router';
-import { handleEvent, clearOutcome } from '../store/actions/game';
 import { incrementPoints } from '../store/actions/skills';
 
 export default function MainScene() {
@@ -94,18 +95,6 @@ export default function MainScene() {
                     </>
                     : <p className="description">Nothing is happening… yet.</p>
                 }
-            </main>
-        </div>
-    );
-}
-
-function Gauge(props = { id: 'hunger', value: 0.5 }) {
-    const size = props.value * 100;
-    return (
-        <div className={"gauge " + props.id}>
-            <img src={`/icons/gauges/${props.id}.png`} alt={props.id} />
-            <main>
-                <div className="fill" style={{ width: `${size}%`}}></div>
             </main>
         </div>
     );
