@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import Gauge from '../components/Gauge';
 import IconButton from '../components/IconButton';
 import { State } from '../store';
-import { handleEvent } from '../store/actions/game';
+import { clearOutcome, handleEvent } from '../store/actions/game';
 import { goTo } from '../store/actions/router';
 import { incrementPoints } from '../store/actions/skills';
 
@@ -20,26 +20,32 @@ export default function MainScene() {
             points: state.points,
         };
     });
+
     const dispatch = useDispatch();
     React.useEffect(() => {
         if (gauges.some(x => x.value < 0)) {
             dispatch(goTo('game-over'));
         }
     }, [gauges]);
+
     const openSkills = React.useCallback(() => {
         dispatch(clearOutcome());
         dispatch(goTo('skills'));
-    })
+    }, [dispatch]);
+
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));
     }, [dispatch]);
+
     const handle = React.useCallback((id) => {
         dispatch(handleEvent(event.actions[id], host.animal));
         dispatch(incrementPoints());
     }, [dispatch, event, host]);
+
     const nextEvent = React.useCallback(() => {
         dispatch(clearOutcome());
-    });
+    }, [dispatch]);
+
     const visibleGauges = gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo');
 
     return (
@@ -49,7 +55,7 @@ export default function MainScene() {
                     <IconButton on={false} iconOn='/icons/menu.png' iconOff='/icons/menu.png' altOn='Menu' altOff='Menu' onToggle={openMenu} />
                 </nav>
                 <main>
-                    {visibleGauges.map(g => (<Gauge key={g.name} id={g.name} value={g.value} />))}                    
+                    {visibleGauges.map(g => (<Gauge key={g.name} id={g.name} value={g.value} />))}
                 </main>
                 <p>Day {1 + Math.floor(totalScore / 4)}</p>
             </header>
