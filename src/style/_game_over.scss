@@ -1,7 +1,8 @@
-.game-over {
+#app > .game-over {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 
     color: white;
 
