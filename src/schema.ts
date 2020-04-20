@@ -23,3 +23,14 @@ export interface ActionOutcome {
     peepoo: Number;
     health: Number;
 }
+
+// Skills Tree
+
+export interface SkillDefinition {
+    id: string;
+    parentId: string | null;
+    x: number;
+    y: number;
+    name?: string;
+    description?: string;
+}

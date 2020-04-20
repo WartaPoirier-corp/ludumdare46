@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import routerReducer from './router';
-import { soundReducer, musicReducer } from './settings';
-import { hostReducer, handleReducer } from './game';
 import { Event } from '../../schema';
+import { hostReducer, handleReducer } from './game';
+import routerReducer from './router';
+import { musicReducer, soundReducer } from './settings';
+import { pointsReducer, skillsReducer } from './skills';
 
 const INITIAL_GAUGE_VALUE = 0.5;
 
@@ -21,7 +22,8 @@ export const initialState = {
             name,
         };
     }),
-    skills: ['mood', 'energy', 'hunger', 'peepoo', 'vision-1', 'smell-1'],
+    points: 0,
+    skills: [],
     musicOn: false,
     soundOn: false,
     event: { actions: [], hints:[], description: '', } as Event,
@@ -34,8 +36,8 @@ export const reducers = handleReducer(combineReducers({
     page: routerReducer,
     host: hostReducer,
     gauges: id('gauges'),
-    event: id('event'),
-    skills: id('skills'),
+    points: pointsReducer,
+    skills: skillsReducer,
     musicOn: musicReducer,
     soundOn: soundReducer,
 }));
