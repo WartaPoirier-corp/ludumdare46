@@ -2,7 +2,7 @@ export interface Event {
     hints: Hint[];
     actions: Action[];
     description: string;
-    requires?: string[];
+    require?: string[];
     animals: string[],
 }
 

@@ -50,9 +50,10 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
 export function eventReducer(state: Event = { hints: [], actions: [], description: '', animals: [] }, action) {
     switch (action.type) {
         case HANDLE_EVENT:
+            console.log(action.skills)
             return shuffle(allEvents).find(x =>
                 x.animals.includes(action.host) &&
-                    (!x.requires || x.requires.every(r => action.skills.include(r))))
+                    (!x.require || x.require.every(r => action.skills.includes(r))))
                 || null;
         default: return state;
     }
