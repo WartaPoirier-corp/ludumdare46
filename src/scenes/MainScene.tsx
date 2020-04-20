@@ -4,7 +4,7 @@ import IconButton from '../components/IconButton';
 import Button from '../components/Button';
 import { State } from '../store';
 import { goTo } from '../store/actions/router';
-import { handleEvent } from '../store/actions/game';
+import { handleEvent, clearOutcome } from '../store/actions/game';
 import { incrementPoints } from '../store/actions/skills';
 
 export default function MainScene() {
@@ -25,11 +25,10 @@ export default function MainScene() {
             dispatch(goTo('game-over'));
         }
     }, [gauges]);
-    React.useEffect(() => {
-        if (points == 5) {
-            dispatch(goTo('skills'));
-        }
-    }, [points])
+    const openSkills = React.useCallback(() => {
+        dispatch(clearOutcome());
+        dispatch(goTo('skills'));
+    })
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));
     }, [dispatch]);
@@ -37,6 +36,9 @@ export default function MainScene() {
         dispatch(handleEvent(event.actions[id], host.animal));
         dispatch(incrementPoints());
     }, [dispatch, event, host]);
+    const nextEvent = React.useCallback(() => {
+        dispatch(clearOutcome());
+    });
 
     return (
         <div className="main-scene">
@@ -50,8 +52,15 @@ export default function MainScene() {
                 <p>Day {1 + Math.floor(totalScore / 4)}</p>
             </header>
             <main>
-                {lastOutcome !== null ? <p className="description">{lastOutcome}</p> : null}
-                {event !== null ?
+                {lastOutcome !== null ?
+                <div className="outcome">
+                    <p>{lastOutcome}</p>
+                    {points === 5 ? <>
+                            <p>You also have enough points to unlock a new skill, to better understand your host!</p>
+                            <Button onClick={openSkills}>Choose a new skill</Button>
+                        </> : <Button onClick={nextEvent}>Okay</Button>}
+                </div>:
+                event !== null ?
                     <>
                         <p className="description">{event.description}</p>
                         <section className="hints">

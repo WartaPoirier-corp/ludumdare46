@@ -1,4 +1,4 @@
-import { SET_HOST, HANDLE_EVENT } from '../actions/game';
+import { SET_HOST, HANDLE_EVENT, CLEAR_OUTCOME } from '../actions/game';
 import { SKILL_POINTS_INCREMENT } from '../actions/skills';
 import { Host } from './';
 import { Event } from '../../schema';
@@ -80,6 +80,8 @@ export function lastOutcomeReducer(lo = null, action) {
     switch (action.type) {
         case HANDLE_EVENT:
             return action.act.endMsg || null;
+        case CLEAR_OUTCOME:
+            return null;
         default: return lo;
     }
 }
