@@ -437,7 +437,7 @@
       "actions": [
         { "title": "Seduce", "outcomes": { "mood": 0.1, "libido": 0.2, "suspicion": -0.1 }, "endMsg":"You tried to seduce a rabbit."},
         { "title": "Eat", "outcomes": { "hunger": 0.3, "mood": 0.1, "energy": 0.1, "peepoo": -0.1, "suspicion": -0.1 }, "endMsg":"You ate a rabbit."},
-        { "title": "Growl", "outcomes": {"energy": -0.05, "hunger": -0.05, "suspicion": +0.1 }, "endMsg": "You growled in front of a rabbit."}
+        { "title": "Growl", "outcomes": {"energy": -0.05, "hunger": -0.05, "suspicion": 0.1 }, "endMsg": "You growled in front of a rabbit."}
       ]
     },
   	{
@@ -450,9 +450,9 @@
         {"category": "vision-3", "description": "You can see a rectangular shape."}
       ],
       "actions": [
-        { "title": "Scratch", "outcomes": { "mood": 0.1, "libido": 0.2, "suspicion": +0.05 }, "endMsg":"You scratched the door."},
+        { "title": "Scratch", "outcomes": { "mood": 0.1, "libido": 0.2, "suspicion": 0.05 }, "endMsg":"You scratched the door."},
         { "title": "Attack", "outcomes": { "hunger": -0.1, "energy": -0.1, "suspicion": -0.05 }, "endMsg":"You attacked the door."},
-        { "title": "Relieve yourself", "outcomes": {"mood": -0.1, "peepoo": +0.3, "suspicion": -0.1 }, "endMsg": "You relieved yourself on the door."},
+        { "title": "Relieve yourself", "outcomes": {"mood": -0.1, "peepoo": 0.3, "suspicion": -0.1 }, "endMsg": "You relieved yourself on the door."},
         { "title": "Relieve yourself", "outcomes": {"energy": -0.05, "hunger": -0.05 }, "endMsg": "You did nothing in front of the door."}
       ]
     },
