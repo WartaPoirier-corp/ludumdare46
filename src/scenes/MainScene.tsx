@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '../components/Button';
 import Gauge from '../components/Gauge';
 import IconButton from '../components/IconButton';
+import ModalSkillsTree from '../components/ModalSkillsTree';
 import { State } from '../store';
 import { clearOutcome, handleEvent } from '../store/actions/game';
 import { goTo } from '../store/actions/router';
 import { incrementPoints } from '../store/actions/skills';
 
 export default function MainScene() {
+    const [skillsOpen, setSkillsOpen] = useState(false);
+
+    const closeSkills = useCallback(() => {
+        setSkillsOpen(false);
+    }, [setSkillsOpen]);
+
     const { gauges, event, skills, host, lastOutcome, totalScore, points } = useSelector((state: State) => {
         return {
             gauges: state.gauges,
@@ -30,7 +37,7 @@ export default function MainScene() {
 
     const openSkills = React.useCallback(() => {
         dispatch(clearOutcome());
-        dispatch(goTo('skills'));
+        setSkillsOpen(true);
     }, [dispatch]);
 
     const openMenu = React.useCallback(() => {
@@ -50,6 +57,7 @@ export default function MainScene() {
 
     return (
         <div className="main-scene">
+            <ModalSkillsTree visible={skillsOpen} onClose={closeSkills} />
             <header>
                 <nav>
                     <IconButton on={false} iconOn='/icons/menu.png' iconOff='/icons/menu.png' altOn='Menu' altOff='Menu' onToggle={openMenu} />
