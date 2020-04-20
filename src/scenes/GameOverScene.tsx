@@ -64,7 +64,7 @@ export default function GameOverScene() {
                     />
                 ))}
             </div>
-            <Button onClick={next}>Okay</Button>
+            <Button onClick={next}>Okay, go back to the menu</Button>
         </div>
     );
 }
