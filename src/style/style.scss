@@ -17,6 +17,10 @@ html, body, #app, #app > * {
     overflow: hidden; // for tentacles
 }
 
+.invisible {
+    display: none;
+}
+
 // Components
 @import '_buttons';
 @import '_card';
