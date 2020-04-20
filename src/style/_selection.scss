@@ -1,7 +1,8 @@
-.host-selection {
+#app > .host-selection {
     background: $darkpurple;
     padding: 5em;
     min-height: calc(100vh - 10em);
+    max-width: calc(100vw - 10em);
     color: white;
     & > p {
         text-align: center;

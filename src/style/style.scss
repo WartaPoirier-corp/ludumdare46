@@ -14,14 +14,17 @@ html, body, #app, #app > * {
     background: $darkpurple;
     width: 100%;
     height: 100%;
+    overflow: hidden; // for tentacles
 }
 
 // Components
 @import '_buttons';
 @import '_card';
 @import 'skills_tree';
+@import '_tentacles';
 
 // Scenes
 @import '_menu';
 @import '_credits';
 @import '_selection';
+@import '_main';

@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from '../components/Button';
 import { goTo } from '../store/actions/router';
-import { setHost } from '../store/actions/game';
+import { setHost, handleEvent } from '../store/actions/game';
 import { useDispatch } from 'react-redux';
+import { play } from '../audio';
 
 export default function HostSelectionScene() {
     const dispatch = useDispatch();
@@ -33,7 +34,9 @@ export default function HostSelectionScene() {
         },
     ];
     const go = (id) => React.useCallback(() => {
+        play(`/audio/${id}.mp3`);
         dispatch(setHost(id));
+        dispatch(handleEvent(0)); // generate a first event
         dispatch(goTo('main-scene'));
     }, []);
 
@@ -46,7 +49,7 @@ export default function HostSelectionScene() {
             <main>
                 {choices.map(c => {
                     return (
-                        <div className="card">
+                        <div key={c.id} className="card">
                             <h1>{c.name}</h1>
                             <img src={c.icon} alt={c.name} />
                             <p className="main">{c.description}</p>

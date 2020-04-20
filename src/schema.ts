@@ -1,25 +1,27 @@
-export interface Choice {
+export interface Event {
     hints: Hint[];
     actions: Action[];
+    description: string;
+    requires?: string[];
 }
 
-type HintCategory = 'sound' | 'visual' | 'smell' | 'feelings' | 'basic-needs';
-
 export interface Hint {
-    category: HintCategory;
-    actions: (string | null)[];
+    category: string;
+    description: string;
 }
 
 export interface Action {
     title: string;
-    outcome: ActionOutcome[];
+    outcome: ActionOutcome;
+    endMsg: string;
 }
 
-type Gauge = 'mood' | 'energy' | 'hunger' | 'peepoo';
-
 export interface ActionOutcome {
-    gauge: Gauge;
-    variation: Number;
+    mood: Number;
+    energy: Number;
+    hunger: Number;
+    peepoo: Number;
+    health: Number;
 }
 
 // Skills Tree

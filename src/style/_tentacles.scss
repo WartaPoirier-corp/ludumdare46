@@ -1,0 +1,49 @@
+#tent1, #tent2, #tent3, #tent4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    background: transparent;
+}
+
+#tent1 {
+    left: -10px;
+    bottom: 100px;
+    animation-duration: 8s;
+    transform-origin: left;
+}
+
+#tent2 {
+    right: -10px;
+    top: 150px;
+    animation-duration: 6s;
+    transform-origin: right;
+}
+
+#tent3 {
+    right: 20vw;
+    bottom: -10px;
+    animation-duration: 7s;
+    transform-origin: bottom;
+}
+
+#tent4 {
+    left: 35vw;
+    bottom: -10px;
+    animation-duration: 5s;
+    transform-origin: bottom;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}

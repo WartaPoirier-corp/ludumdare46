@@ -1,6 +1,7 @@
-.menu {
+#app > .menu {
     height: calc(100vh - 10em);
     padding: 5em;
+    width: auto;
 
     section, footer {
         max-width: 20vw;
