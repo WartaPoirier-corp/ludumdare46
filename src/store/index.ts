@@ -7,5 +7,7 @@ export type State = InnerState;
 export default createStore(
     reducers, // Initialization reducer
     initialState,
-    compose(persistState())
+    // save everything but the page (so that we restart on the menu),
+    // and musicOn (because it needs to be manually triggered)
+    compose(persistState([ 'host', 'gauges', 'points', 'totalScore', 'skills', 'event', 'soundOn', 'lastOutcome' ]))
 );
