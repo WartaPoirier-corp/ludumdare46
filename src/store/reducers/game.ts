@@ -88,6 +88,7 @@ export function lastOutcomeReducer(lo = null, action) {
 
 export function totalScoreReducer(score = 0, action) {
     switch (action.type) {
+        case SET_HOST: return 0;
         case SKILL_POINTS_INCREMENT: return score + 1;
         default: return score;
     }
