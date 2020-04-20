@@ -19,23 +19,22 @@ export default function HostSelectionScene() {
                 if it's the first time I travel to Earth.`
         },
         {
-            name: 'Cat : easy',
-            id: 'cat',
-            icon: '/animals/cat.png',
-            description:
-                `In his eyes, there's a look that says "I'm a lot better than all of you, peasants".
-                But he looks very independant, so it wont be very hard to hide. On the other hand,
-                he still looks close to humans. Or at least, humans treasure this animal.
-                So he wont be as easier as it seems.`
-        },
-                {
-            name: 'Dog : hard',
+            name: 'Dog : easy',
             id: 'dog',
             icon: '/animals/dog.png',
             description:
                 `This one looks a little bit stupid, but at least he's bigger then the otter and the
-                cat. But because normally his choices are quite logical, it will be harder to hide and
-                not be discovered. I need to be extremely careful if I chose this one.`
+                cat. It lives with humans almost all the time, so surviving shouldn't be too hard: they
+                are here to take care of him (and thus of me!).`
+        },
+        {
+            name: 'Cat : hard',
+            id: 'cat',
+            icon: '/animals/cat.png',
+            description:
+                `In his eyes, there's a look that says "I'm a lot better than all of you, peasants".
+                But he looks very independant, so it won't be very hard to hide. On the other hand,
+                he still looks close to humans. Or at least, humans treasure this animal.`
         },
         {
             name: 'Triceratops : impossible',
