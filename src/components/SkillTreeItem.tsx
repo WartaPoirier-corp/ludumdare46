@@ -29,12 +29,7 @@ export default function SkillTreeItem(props: SkillTreeItemProps) {
             disabled={props.unlocked}
             onClick={onClick}
         >
-            {!isRoot && (
-                <img
-                    src={`/skills/${props.skill.id}.png`}
-                    alt={readableName}
-                />
-            )}
+            <img src={`/skills/${props.skill.id}.png`} alt={readableName}/>
         </button>
     );
 }

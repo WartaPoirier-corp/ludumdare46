@@ -10,7 +10,7 @@ import { incrementPoints } from '../store/actions/skills';
 export default function MainScene() {
     const { gauges, event, skills, host, lastOutcome, totalScore, points } = useSelector((state: State) => {
         return {
-            gauges: state.gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo'),
+            gauges: state.gauges,
             event: state.event,
             skills: state.skills,
             host: state.host,
@@ -39,6 +39,7 @@ export default function MainScene() {
     const nextEvent = React.useCallback(() => {
         dispatch(clearOutcome());
     });
+    const visibleGauges = gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo');
 
     return (
         <div className="main-scene">
@@ -47,7 +48,7 @@ export default function MainScene() {
                     <IconButton on={false} iconOn='/icons/menu.png' iconOff='/icons/menu.png' altOn='Menu' altOff='Menu' onToggle={openMenu} />
                 </nav>
                 <main>
-                    {gauges.map(g => (<Gauge key={g.name} id={g.name} value={g.value} />))}                    
+                    {visibleGauges.map(g => (<Gauge key={g.name} id={g.name} value={g.value} />))}                    
                 </main>
                 <p>Day {1 + Math.floor(totalScore / 4)}</p>
             </header>

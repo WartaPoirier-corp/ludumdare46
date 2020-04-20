@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
 import Credits from './scenes/CreditsScene';
+import HowToPlay from './scenes/HowToPlayScene';
 import Intro from './scenes/IntroScene';
 import HostSelection from './scenes/HostSelectionScene';
 import MainScene from './scenes/MainScene';
@@ -28,6 +29,7 @@ function Router() {
         case 'host-selection': return <HostSelection />;
         case 'main-scene': return <MainScene />;
         case 'skills': return <SkillsTree />;
+        case 'how-to-play': return <HowToPlay />
         default: return <div>Error! (page not found : {p})</div>
     }
 }

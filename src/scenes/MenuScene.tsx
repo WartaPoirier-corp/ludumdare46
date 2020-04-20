@@ -35,6 +35,9 @@ export default function MenuScene() {
     const toggleSoundCb = React.useCallback(() => {
         dispatch(toggleSound())
     }, [dispatch]);
+    const howToPlay = React.useCallback(() => {
+        dispatch(goTo('how-to-play'));
+    }, [dispatch]);
 
     return (
         <main className="menu">
@@ -44,6 +47,7 @@ export default function MenuScene() {
             <section>
                 <Button onClick={newGame}>New game</Button>
                 {host.animal ? <Button onClick={resume}>Resume game</Button> : null}
+                <Button onClick={howToPlay}>How to play?</Button>
                 <Button onClick={credits}>Credits</Button>
             </section>
             <footer>

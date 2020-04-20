@@ -16,7 +16,7 @@ export default function CreditsScene() {
                 the 46<sup>th</sup> Ludum Dare.
             </p>
             <ul>
-                <li><b>Mathis Grange</b> did most of the level design.</li>
+                <li><b>Mathis Grange</b>, <b>Clara Poirier</b>, <b>Pénélope Douet</b>, <b>Mattéo Decorsaire</b> and <b>Thibault Bustarret</b> did most of the level design.</li>
                 <li><b>Mattéo Decorsaire</b> and <b>Pénélope Douet</b> made all our icons and graphical assets.</li>
                 <li><b>Clara Poirier</b> composed the musics and recorded the sounds of the game.</li>
                 <li><b>Baptiste Gelez</b> and <b>Edgar Onghena</b> wrote the code.</li>

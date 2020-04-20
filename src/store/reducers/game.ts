@@ -4,9 +4,9 @@ import { Host } from './';
 import { Event } from '../../schema';
 import allEvents from '../../data/events.json';
 
-interface Gauge {
+export interface Gauge {
     name: string;
-    value: Number;
+    value: number;
 }
 
 export function hostReducer(state: Host = {}, action) {
@@ -16,7 +16,7 @@ export function hostReducer(state: Host = {}, action) {
     }
 }
 
-const GAUGES = [ 'mood', 'energy', 'health', 'hunger', 'peepoo', 'libido' ];
+const GAUGES = [ 'mood', 'energy', 'health', 'hunger', 'peepoo', 'libido', 'suspicion' ];
 const INITIAL_GAUGE_VALUE = {
     otter: 0.9,
     cat: 0.8,
