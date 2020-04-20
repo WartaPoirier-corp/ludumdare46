@@ -9,15 +9,17 @@ import { handleEvent } from '../store/actions/game';
 export default function MainScene() {
     const { gauges, event, skills } = useSelector((state: State) => {
         return {
-            gauges: state.gauges.filter(g => state.skills.indexOf(g.name) >= 0),
+            gauges: state.gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo'),
             event: state.event,
             skills: state.skills,
         };
     });
     const dispatch = useDispatch();
-    if (gauges.some(x => x.value < 0)) {
-        dispatch(goTo('game-over'));
-    }
+    React.useEffect(() => {
+        if (gauges.some(x => x.value < 0)) {
+            dispatch(goTo('game-over'));
+        }
+    }, [gauges]);
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));
     }, [dispatch]);

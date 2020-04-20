@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStore } from 'react-redux';
 import { play } from '../audio';
 
 interface Props {

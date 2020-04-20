@@ -24,7 +24,6 @@ const INITIAL_GAUGE_VALUE = {
 };
 
 export function gaugesReducer(gauges: Gauge[] = [], action) {
-    console.log(gauges, action);
     switch (action.type) {
         case SET_HOST:
             return GAUGES.map(g => {
@@ -35,7 +34,8 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
             });
         case HANDLE_EVENT:
             return gauges.map(g => {
-                if (action.act != null && action.act.outcomes[g.name] != null) {
+                console.log(action);
+                if (action.act != null && action.act.outcomes != null && action.act.outcomes[g.name] != null) {
                     g.value += action.act.outcomes[g.name];
                 }
                 return g;
