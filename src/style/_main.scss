@@ -58,10 +58,14 @@ $skills: (
         }
 
         .illus {
-            display: flex;
+            display: grid;
             justify-content: center;
+            justify-items: center;
+            align-items: center;
         }
         img {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
             display: block;
             height: 15vw;
             margin: 3em 1em;

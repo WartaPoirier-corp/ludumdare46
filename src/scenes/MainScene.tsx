@@ -98,8 +98,7 @@ export default function MainScene() {
                                 )}
                         </section>
                         <div className="illus">
-                            <img alt="The parasite" src="/animals/parasite.png" />
-                            <img alt="Your host" src={`/animals/${host.animal}.png`} />
+                            <img alt="Your host" src={`/animals/para-${host.animal}.png`} />
                         </div>
                         <section className="choices">
                             {event.actions.map((a, i) => (
