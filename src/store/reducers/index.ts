@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 import { Event } from '../../schema';
-import { hostReducer, eventReducer, gaugesReducer, lastOutcomeReducer, totalScoreReducer } from './game';
+import { hostReducer, eventReducer, gaugesReducer, lastOutcomeReducer, totalScoreReducer, Gauge } from './game';
 import routerReducer from './router';
 import { musicReducer, soundReducer } from './settings';
 import { pointsReducer, skillsReducer } from './skills';
-
-const INITIAL_GAUGE_VALUE = 0.5;
 
 // everything is nullable because the initial value (when no host is selected)
 // is {}
@@ -16,12 +14,7 @@ export interface Host {
 export const initialState = {
     host: {} as Host,
     page: 'menu',
-    gauges: ['mood', 'energy', 'hunger', 'peepoo'].map(name => {
-        return {
-            value: INITIAL_GAUGE_VALUE,
-            name,
-        };
-    }),
+    gauges: [] as Gauge[],
     points: 0,
     totalScore: 0,
     skills: [ 'vision-1', 'sound-1', 'feelings-1', 'needs-1', 'smell-1' ],
