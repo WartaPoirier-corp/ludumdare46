@@ -54,7 +54,10 @@ export default function MainScene() {
                                         </div>)
                                 )}
                         </section>
-                        <img alt="The parasite" src="/animals/parasite.png" />
+                        <div className="illus">
+                            <img alt="The parasite" src="/animals/parasite.png" />
+                            <img alt="Your host" src={`/animals/${host.animal}.png`} />
+                        </div>
                         <section className="choices">
                             {event.actions.map((a, i) => (
                                 <Button onClick={handle.bind(this, i)} key={i}>{a.title}</Button>
