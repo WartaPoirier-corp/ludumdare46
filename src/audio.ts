@@ -1,6 +1,7 @@
 import store from './store';
 
 let music = new Audio('/audio/gnuh.mp3');
+music.loop = true;
 let musicStarted = false;
 export function muteMusic(muted) {
     if (!muted && !musicStarted) {
