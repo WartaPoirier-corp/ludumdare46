@@ -15,9 +15,9 @@ The game is [available online](https://parasists.argupedia.org).
 ## Team
 
 - Graphics: Mattéo Decorsaire and Pénélope Douet
-- Audio: @clarabistouille
-- Game data: Pénélope Douet, Mattéo Decorsaire, @Wartapoo, @clarabistouille and @ThibaultBus
-- Code: @edgargh and @elegaanz
+- Audio: [@clarabistouille](https://github.com/clarabistouille)
+- Game data: Pénélope Douet, Mattéo Decorsaire, [@Wartapoo](https://github.com/Wartapoo), [@clarabistouille](https://github.com/clarabistouille) and [@ThibaultBus](https://github.com/ThibaultBus)
+- Code: [@edgarogh](https://github.com/edgarogh) and [@elegaanz](https://github.com/elegaanz)
 
 All assets are under the CC-BY-SA licence. The code is under the GPLv3.0 licence.
 

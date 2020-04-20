@@ -62,7 +62,7 @@
         "id": "sound-1",
         "parentId": "root",
         "x": 1,
-        "y": 2,
+        "y": 3,
         "name": "Hearing I",
         "description": "Allows you to hear loud sounds."
     },
@@ -70,7 +70,7 @@
         "id": "sound-2",
         "parentId": "sound-1",
         "x": 2,
-        "y": 2,
+        "y": 3,
         "name": "Hearing II",
         "description": "Allows you to recognize sounds your host finds familiar."
     },
@@ -78,7 +78,7 @@
         "id": "sound-3",
         "parentId": "sound-2",
         "x": 3,
-        "y": 2,
+        "y": 3,
         "name": "Hearing III",
         "description": "Allows you to have a short description of the sound."
     },
@@ -87,7 +87,7 @@
         "id": "feelings-1",
         "parentId": "root",
         "x": 1,
-        "y": 3,
+        "y": 4,
         "name": "Feelings Perception I",
         "description": "Allows you to know if your host is scared."
     },
@@ -95,7 +95,7 @@
         "id": "feelings-2",
         "parentId": "feelings-1",
         "x": 2,
-        "y": 3,
+        "y": 4,
         "name": "Feelings Perception II",
         "description": "Allows you to know if your host is attracted towards something."
     },
@@ -103,33 +103,8 @@
         "id": "feelings-3",
         "parentId": "feelings-2",
         "x": 3,
-        "y": 3,
+        "y": 4,
         "name": "Feelings Perception III",
         "description": "Allows you to know if your host is excited."
-    },
-
-    {
-        "id": "needs-1",
-        "parentId": "root",
-        "x": 1,
-        "y": 4,
-        "name": "Physical Needs I",
-        "description": "Allows you to know if your host is hungry."
-    },
-    {
-        "id": "needs-2",
-        "parentId": "needs-1",
-        "x": 2,
-        "y": 4,
-        "name": "Physical Needs II",
-        "description": "Allows you to know if your host needs to use their restroom."
-    },
-    {
-        "id": "needs-3",
-        "parentId": "needs-2",
-        "x": 3,
-        "y": 4,
-        "name": "Physical Needs III",
-        "description": "Allows you to know if you're horny or bored."
     }
 ]
