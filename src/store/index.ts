@@ -1,4 +1,5 @@
-import { createStore } from 'redux';
+import { compose, createStore } from 'redux';
+import persistState from 'redux-localstorage';
 import { State as InnerState, reducers, initialState } from './reducers'
 
 export type State = InnerState;
@@ -7,5 +8,5 @@ export default createStore(
     reducers, // Initialization reducer
     initialState,
     // @ts-ignore
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    compose(persistState(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
