@@ -14,6 +14,9 @@ export default function MainScene() {
             skills: state.skills,
         };
     });
+    if (gauges.some(x => x < 0)) {
+        dispatch(goTo('game-over'));
+    }
     const dispatch = useDispatch();
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));

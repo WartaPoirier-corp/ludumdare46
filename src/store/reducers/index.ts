@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { Event } from '../../schema';
-import { hostReducer, handleReducer } from './game';
+import { hostReducer, eventReducer, gaugesReducer } from './game';
 import routerReducer from './router';
 import { musicReducer, soundReducer } from './settings';
 import { pointsReducer, skillsReducer } from './skills';
@@ -30,14 +30,13 @@ export const initialState = {
 };
 export type State = typeof initialState;
 
-const id = (name) => (x = initialState[name], _) => x;
-
-export const reducers = handleReducer(combineReducers({
+export const reducers = combineReducers({
     page: routerReducer,
     host: hostReducer,
-    gauges: id('gauges'),
+    gauges: gaugesReducer,
+    event: eventReducer,
     points: pointsReducer,
     skills: skillsReducer,
     musicOn: musicReducer,
     soundOn: soundReducer,
-}));
+});

@@ -10,31 +10,27 @@ export function hostReducer(state: Host = {}, action) {
     }
 }
 
-export function handleReducer(next) {
-    return (state: State, action) => {
-        switch (action.type) {
-            case HANDLE_EVENT:
-                const res = next(state, action);
-                res.gauges = res.gauges.map(g => {
-                    const act = res.event.actions[action.actionId];
-                    if (act != null && act.outcomes[g.name] != null) {
-                        g.value += act.outcomes[g.name];
-                    }
-                    return g;
-                });
-                if (res.gauges.some(x => x.value < 0)) {
-                    res.page = 'game-over';
+export function gaugesReducer(gauges: Gauge[] = [], action) {
+    console.log(gauges, action);
+    switch (action.type) {
+        case HANDLE_EVENT:
+            return gauges.map(g => {
+                const act = res.event.actions[action.actionId];
+                if (act != null && act.outcomes[g.name] != null) {
+                    g.value += act.outcomes[g.name];
                 }
-                res.event = nextEvent(res);
-                return { ...res };
-            default:
-                return next(state, action);
-        }
+                return g;
+            });
+        default: return gauges;
     }
 }
 
-function nextEvent(state: State) {
-    return shuffle(allEvents)[0];
+export function eventReducer(state: Event = {}, action) {
+    switch (action.type) {
+        case HANDLE_EVENT:
+            return shuffle(allEvents)[0];
+        default: return state;
+    }
 }
 
 // I stole that on stackoverflow
