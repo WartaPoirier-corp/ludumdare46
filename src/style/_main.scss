@@ -1,9 +1,25 @@
+$gauges: (
+  'hunger': red,
+  'mood': chartreuse,
+  'energy': yellow,
+  'peepoo': blue,
+);
+
+$skills: (
+  'feelings': purple,
+  'needs': blue,
+  'smell': green,
+  'sound': orange,
+  'vision': turquoise,
+);
+
 #app > .main-scene {
     padding: 2em 5em;
     width: auto;
     height: calc(100vh - 4em);
     header {
         display: flex;
+        align-items: center;
         & > main {
             flex: 1;
             display: flex;
@@ -13,16 +29,26 @@
                 display: flex;
             }
         }
+
+        & > p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
     }
 
     & > main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        & > img {
+        .illus {
+            display: flex;
+            justify-content: center;
+        }
+        img {
             display: block;
-            width: 200px;
-            margin: 3em auto;
+            height: 200px;
+            margin: 3em 1em;
         }
 
         & > section {
@@ -33,6 +59,29 @@
                 animation-name: float;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                align-items: center;
+                overflow: hidden;
+
+                .icon {
+                    display: inline;
+                    padding: 16px;
+                    margin: 0px;
+                    max-width: 32px;
+                    height: calc(100% - 32px);
+
+                    @each $name, $color in $skills {
+                        &.#{$name} {
+                            background: $color;
+                        }
+                    }
+                }
+
+                span {
+                    margin: 1em;
+                }
             }
 
             .button {
@@ -44,7 +93,7 @@
         .description {
             color: white;
             text-align: center;
-            margin: 3em auto;
+            margin: 1.5em auto;
         }
     }
 }
@@ -68,6 +117,7 @@
     main {
         border-radius: 8px;
         flex: 1;
+        overflow: hidden;
         div {
             height: 16px;
             border-radius: 8px 0px 0px 8px;
@@ -75,13 +125,6 @@
         }
     }
 }
-
-$gauges: (
-  'hunger': red,
-  'mood': chartreuse,
-  'energy': yellow,
-  'peepoo': blue,
-);
 
 @each $name, $color in $gauges {
     .gauge.#{$name} {

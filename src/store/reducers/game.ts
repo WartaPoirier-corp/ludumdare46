@@ -1,4 +1,5 @@
 import { SET_HOST, HANDLE_EVENT } from '../actions/game';
+import { SKILL_POINTS_INCREMENT } from '../actions/skills';
 import { Host } from './';
 import { Event } from '../../schema';
 import allEvents from '../../data/events.json';
@@ -34,9 +35,11 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
             });
         case HANDLE_EVENT:
             return gauges.map(g => {
-                console.log(action);
                 if (action.act != null && action.act.outcomes != null && action.act.outcomes[g.name] != null) {
                     g.value += action.act.outcomes[g.name];
+                    if (g.value > 1) {
+                        g.value = 1;
+                    }
                 }
                 return g;
             });
@@ -44,10 +47,10 @@ export function gaugesReducer(gauges: Gauge[] = [], action) {
     }
 }
 
-export function eventReducer(state: Event = { hints: [], actions: [], description: '' }, action) {
+export function eventReducer(state: Event = { hints: [], actions: [], description: '', animals: [] }, action) {
     switch (action.type) {
         case HANDLE_EVENT:
-            return shuffle(allEvents)[0];
+            return shuffle(allEvents).find(x => x.animals.includes(action.host)) || null;
         default: return state;
     }
 }
@@ -71,4 +74,19 @@ function shuffle(array) {
     }
 
     return array;
+}
+
+export function lastOutcomeReducer(lo = null, action) {
+    switch (action.type) {
+        case HANDLE_EVENT:
+            return action.act.endMsg || null;
+        default: return lo;
+    }
+}
+
+export function totalScoreReducer(score = 0, action) {
+    switch (action.type) {
+        case SKILL_POINTS_INCREMENT: return score + 1;
+        default: return score;
+    }
 }

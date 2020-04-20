@@ -5,13 +5,18 @@ import Button from '../components/Button';
 import { State } from '../store';
 import { goTo } from '../store/actions/router';
 import { handleEvent } from '../store/actions/game';
+import { incrementPoints } from '../store/actions/skills';
 
 export default function MainScene() {
-    const { gauges, event, skills } = useSelector((state: State) => {
+    const { gauges, event, skills, host, lastOutcome, totalScore, points } = useSelector((state: State) => {
         return {
             gauges: state.gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo'),
             event: state.event,
             skills: state.skills,
+            host: state.host,
+            lastOutcome: state.lastOutcome,
+            totalScore: state.totalScore,
+            points: state.points,
         };
     });
     const dispatch = useDispatch();
@@ -20,12 +25,18 @@ export default function MainScene() {
             dispatch(goTo('game-over'));
         }
     }, [gauges]);
+    React.useEffect(() => {
+        if (points == 5) {
+            dispatch(goTo('skills'));
+        }
+    }, [points])
     const openMenu = React.useCallback(() => {
         dispatch(goTo('menu'));
     }, [dispatch]);
     const handle = React.useCallback((id) => {
-        dispatch(handleEvent(event.actions[id]))
-    }, [dispatch, event]);
+        dispatch(handleEvent(event.actions[id], host.animal));
+        dispatch(incrementPoints());
+    }, [dispatch, event, host]);
 
     return (
         <div className="main-scene">
@@ -36,8 +47,10 @@ export default function MainScene() {
                 <main>
                     {gauges.map(g => (<Gauge key={g.name} id={g.name} value={g.value} />))}                    
                 </main>
+                <p>Day {1 + Math.floor(totalScore / 4)}</p>
             </header>
             <main>
+                {lastOutcome !== null ? <p className="description">{lastOutcome}</p> : null}
                 {event !== null ?
                     <>
                         <p className="description">{event.description}</p>
@@ -49,11 +62,20 @@ export default function MainScene() {
                                           animationDuration: `${5 + Math.floor(Math.random() * 10)}s` }}
                                           className="card"
                                           key={i}
-                                        >{h.description}
-                                        </div>)
+                                      >
+                                        <img
+                                            className={`icon ${h.category.slice(0, -2)}`}
+                                            src={`/skills/${h.category}.png`}
+                                            title={`Provided by ${h.category}`}
+                                            alt={`Provided by ${h.category} :`} />
+                                        <span>{h.description}</span>
+                                    </div>)
                                 )}
                         </section>
-                        <img alt="The parasite" src="/animals/parasite.png" />
+                        <div className="illus">
+                            <img alt="The parasite" src="/animals/parasite.png" />
+                            <img alt="Your host" src={`/animals/${host.animal}.png`} />
+                        </div>
                         <section className="choices">
                             {event.actions.map((a, i) => (
                                 <Button onClick={handle.bind(this, i)} key={i}>{a.title}</Button>
