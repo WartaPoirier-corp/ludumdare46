@@ -21,13 +21,13 @@ export default function ModalSkillsTree(props: ModalSkillsTreeProps) {
 
     return (
         <div className="modal-skills-tree" data-visible={props.visible}>
-            <dialog>
+            <div className="dialog" role="dialog">
                 <SkillTree
                     skills={skills}
                     unlockedSkills={unlockedSkills}
                     unlockSkill={onUserUnlockSkill}
                 />
-            </dialog>
+            </div>
         </div>
     );
 }

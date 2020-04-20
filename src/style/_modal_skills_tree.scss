@@ -18,7 +18,7 @@ $margin: 3em;
         pointer-events: all;
     }
 
-    & > dialog {
+    & > .dialog {
         display: block;
 
         margin: $margin;
@@ -38,7 +38,7 @@ $margin: 3em;
         }
     }
 
-    &[data-visible="true"] > dialog {
+    &[data-visible="true"] > .dialog {
         opacity: 1.0;
     }
 }
