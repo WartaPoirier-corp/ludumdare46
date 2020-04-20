@@ -15,7 +15,7 @@ export default function HostSelectionScene() {
             description: `
                 This very cute-looking animal lives apart of humans, but from time to time,
                 they are studied by them, so I need to be a little bit careful. It will
-                still be easier then every other host. I should begin with this one
+                still be easier than every other host. I should begin with this one
                 if it's the first time I travel to Earth.`
         },
         {
