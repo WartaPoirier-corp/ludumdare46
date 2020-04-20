@@ -1,7 +1,7 @@
 $gauges: (
   'hunger': red,
   'mood': chartreuse,
-  'energy': yellow,
+  'energy': orange,
   'peepoo': blue,
 );
 
@@ -17,6 +17,7 @@ $skills: (
     padding: 2em 5em;
     width: auto;
     height: calc(100vh - 4em);
+    overflow: auto;
     header {
         display: flex;
         align-items: center;
@@ -41,6 +42,17 @@ $skills: (
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .outcome {
+            padding: 5em auto;
+            color: white;
+            p {
+                font-size: 2em;
+                margin: 3em auto 2em;
+                text-align: center;
+            }
+        }
+
         .illus {
             display: flex;
             justify-content: center;

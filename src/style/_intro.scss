@@ -1,7 +1,8 @@
-.intro {
+#app > .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 
     & > * {
         z-index: 1;
