@@ -19,6 +19,7 @@ $skills: (
     height: calc(100vh - 4em);
     header {
         display: flex;
+        align-items: center;
         & > main {
             flex: 1;
             display: flex;
@@ -27,6 +28,12 @@ $skills: (
             & > div {
                 display: flex;
             }
+        }
+
+        & > p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
         }
     }
 

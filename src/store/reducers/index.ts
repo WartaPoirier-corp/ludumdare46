@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { Event } from '../../schema';
-import { hostReducer, eventReducer, gaugesReducer, lastOutcomeReducer } from './game';
+import { hostReducer, eventReducer, gaugesReducer, lastOutcomeReducer, totalScoreReducer } from './game';
 import routerReducer from './router';
 import { musicReducer, soundReducer } from './settings';
 import { pointsReducer, skillsReducer } from './skills';
@@ -23,6 +23,7 @@ export const initialState = {
         };
     }),
     points: 0,
+    totalScore: 0,
     skills: [ 'vision-1' ],
     musicOn: false,
     soundOn: false,
@@ -41,4 +42,5 @@ export const reducers = combineReducers({
     musicOn: musicReducer,
     soundOn: soundReducer,
     lastOutcome: lastOutcomeReducer,
+    totalScore: totalScoreReducer,
 });

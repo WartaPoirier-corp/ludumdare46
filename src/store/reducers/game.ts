@@ -1,4 +1,5 @@
 import { SET_HOST, HANDLE_EVENT } from '../actions/game';
+import { SKILL_POINTS_INCREMENT } from '../actions/skills';
 import { Host } from './';
 import { Event } from '../../schema';
 import allEvents from '../../data/events.json';
@@ -80,5 +81,12 @@ export function lastOutcomeReducer(lo = null, action) {
         case HANDLE_EVENT:
             return action.act.endMsg || null;
         default: return lo;
+    }
+}
+
+export function totalScoreReducer(score = 0, action) {
+    switch (action.type) {
+        case SKILL_POINTS_INCREMENT: return score + 1;
+        default: return score;
     }
 }
