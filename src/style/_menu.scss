@@ -13,3 +13,12 @@
         justify-content: space-around;
     }
 }
+
+@media screen and (max-width: 560px) {
+    #app > .menu {
+        padding: 1em;
+        section, footer {
+            max-width: 90vw;
+        }
+    }
+}

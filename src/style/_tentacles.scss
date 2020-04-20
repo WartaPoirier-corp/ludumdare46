@@ -48,3 +48,10 @@
         transform: rotate(-15deg);
     }
 }
+
+@media screen and (max-width: 560px) {
+    #tent1, #tent2, #tent3, #tent4 {
+        width: 50px;
+        height: 50px;
+    }
+}

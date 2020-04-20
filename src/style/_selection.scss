@@ -2,7 +2,7 @@
     background: $darkpurple;
     padding: 5em;
     min-height: calc(100vh - 10em);
-    max-width: calc(100vw - 10em);
+    width: auto;
     color: white;
     & > p {
         text-align: center;
@@ -17,6 +17,23 @@
 
             .button {
                 margin: 1em 0em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #app > .host-selection {
+        padding: 1em;
+        main {
+            margin-top: 2em;
+            overflow-y: auto;
+            flex-wrap: wrap;
+            max-height: 90vh;
+            flex-direction: row;
+
+            .card {
+                margin: 1em 0em 0em;
             }
         }
     }

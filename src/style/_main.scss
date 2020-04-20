@@ -1,6 +1,6 @@
 #app > .main-scene {
     padding: 2em 5em;
-    width: calc(100vw - 10em);
+    width: auto;
     height: calc(100vh - 4em);
     header {
         display: flex;
@@ -106,5 +106,36 @@ $gauges: (
     }
     100% {
         transform: translate(-20px, -10px);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #app > .main-scene {
+        padding: 1em;
+        overflow-y: auto;
+        header {
+            flex-direction: column;
+            main {
+                flex-direction: column;
+            }
+        }
+
+        & > main {
+            .hints {
+                align-items: center;
+            }
+            & > section {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .gauge {
+        flex: 0;
+        width: 100%;
+        margin-bottom: 0.5em;
+        main {
+            height: 16px;
+        }
     }
 }
