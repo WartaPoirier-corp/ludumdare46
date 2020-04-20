@@ -24,6 +24,11 @@
     ul {
         padding-left: 2em;
     }
+
+    img {
+        position: relative;
+        top: 0.5em;
+    }
 }
 
 @media screen and (max-width: 560px) {

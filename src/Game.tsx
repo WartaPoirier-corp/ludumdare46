@@ -66,7 +66,7 @@ const sounds = [
 export default function Game() {
     return (
         <ReduxProvider store={store}>
-            <div class="invisible">
+            <div className="invisible">
                 {imgs.map(i => <img src={i} />)}
                 {sounds.map(s => <audio src={s}></audio>)}
             </div>

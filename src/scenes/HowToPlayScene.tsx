@@ -14,8 +14,15 @@ export default function HowToPlayScene() {
             <p>
                 On the main game screen, you are presented events that happens to the animal hosting you, the parasite.
                 Only a very short description of these events is given, and you should use the floating indications
-                and your imagination to understand what is going on, and make the right choice.
+                and your imagination to understand what is going on, and make the right choice. Here are all the gauges:
             </p>
+            <p><img src="/icons/gauges/mood.png" alt="mood" /> Mood</p>
+            <p><img src="/icons/gauges/energy.png" alt="energy"/> Energy</p>
+            <p><img src="/icons/gauges/hunger.png" alt="hunger"/> Hunger</p>
+            <p><img src="/icons/gauges/peepoo.png" alt="pee poo"/> Pee and poo</p>
+            <p><img src="/icons/gauges/libido.png" alt="libido"/> Libido (hidden during the game)</p>
+            <p><img src="/icons/gauges/health.png" alt="health"/> Health (hidden too)</p>
+            <p><img src="/icons/gauges/suspicion.png" alt="suspicion"/> Suspicion: do humans know you exist or not, because of the behaviour of your host (hidden too)</p>
             <p>
                 If you survive long enough, you will have the possibility to unlock new « skills », to view more indications
                 about each event.
