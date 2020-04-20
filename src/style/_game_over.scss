@@ -21,6 +21,13 @@
         
         width: 100%;
 
+        .gauge {
+            display: flex;
+            main {
+                height: 16px;
+            }
+        }
+
         & > .gauge:not(:last-child) {
             margin-bottom: 2em;
         }
