@@ -74,3 +74,11 @@ function shuffle(array) {
 
     return array;
 }
+
+export function lastOutcomeReducer(lo = null, action) {
+    switch (action.type) {
+        case HANDLE_EVENT:
+            return action.act.endMsg || null;
+        default: return lo;
+    }
+}

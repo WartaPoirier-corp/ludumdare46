@@ -7,12 +7,13 @@ import { goTo } from '../store/actions/router';
 import { handleEvent } from '../store/actions/game';
 
 export default function MainScene() {
-    const { gauges, event, skills, host } = useSelector((state: State) => {
+    const { gauges, event, skills, host, lastOutcome } = useSelector((state: State) => {
         return {
             gauges: state.gauges.filter(g => g.name === 'hunger' || g.name === 'energy' || g.name === 'mood' || g.name === 'peepoo'),
             event: state.event,
             skills: state.skills,
             host: state.host,
+            lastOutcome: state.lastOutcome,
         };
     });
     const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export default function MainScene() {
                 </main>
             </header>
             <main>
+                {lastOutcome !== null ? <p className="description">{lastOutcome}</p> : null}
                 {event !== null ?
                     <>
                         <p className="description">{event.description}</p>
