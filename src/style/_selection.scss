@@ -1,18 +1,20 @@
 #app > .host-selection {
     background: $darkpurple;
     padding: 5em;
-    min-height: calc(100vh - 10em);
+    height: calc(100vh - 10em);
     width: auto;
     color: white;
+    overflow-y: auto;
     & > p {
         text-align: center;
     }
     main {
         display: flex;
         justify-content: space-between;
+        overflow-y: auto;
         .card {
             flex: 1;
-            margin: 20vh 2em 0em;
+            margin: 10vh 2em 0em;
             padding-bottom: 0px;
 
             .button {

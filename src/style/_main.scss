@@ -17,6 +17,7 @@ $skills: (
     padding: 2em 5em;
     width: auto;
     height: calc(100vh - 4em);
+    overflow: auto;
     header {
         display: flex;
         align-items: center;
