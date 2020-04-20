@@ -74,8 +74,10 @@ $skills: (
         & > section {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
 
             .card {
+                margin: 1em;
                 animation-name: float;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
