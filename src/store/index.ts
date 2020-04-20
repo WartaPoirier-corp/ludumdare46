@@ -7,6 +7,5 @@ export type State = InnerState;
 export default createStore(
     reducers, // Initialization reducer
     initialState,
-    // @ts-ignore
     compose(persistState())
 );

@@ -29,7 +29,7 @@ export default function GameOverScene() {
         const state = store.getState();
         const gauges = state.gauges;
         const emptyGauges = state.gauges
-            .filter((g) => 0 === g.value)
+            .filter((g) => g.value <= 0)
             .map((g) => g.name)
             .map((g) => (g === 'peepoo') ? 'pee-poo' : g);
 
