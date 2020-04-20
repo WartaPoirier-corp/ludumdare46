@@ -3,6 +3,7 @@ import { useStore } from 'react-redux';
 import Button from '../components/Button';
 import Gauge from '../components/Gauge';
 import { State } from '../store';
+import { setHost } from '../store/actions/game';
 import { goTo } from '../store/actions/router';
 
 const joinGauges = (gauges: string[]) => {
@@ -44,6 +45,7 @@ export default function GameOverScene() {
     }, [])
 
     const next = useCallback(() => {
+        store.dispatch(setHost(null));
         store.dispatch(goTo('menu'));
     }, [store]);
 
