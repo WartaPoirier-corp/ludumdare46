@@ -157,7 +157,7 @@
         { "title": "Eat", "outcomes": { "libido": -0.1, "hunger": 0.2, "peepoo": -0.05 , "suspicion": -0.35}, "endMsg":"You've eaten a guinea pig."},
         { "title": "Attack", "outcomes": { "suspicion": -0.1, "energy": -0.1, "mood": -0.1 } , "endMsg":"You have fiercely attacked a guinea pig."},
         { "title": "Relieve yourself", "outcomes": { "peepoo": 0.2, "libido": -0.1, "suspicion": -0.1 } , "endMsg":"You defacated on a guinea pig."},
-        { "title": "Flee", "outcomes": { "libido": -0.1, "peepoo": - 0.05 }, "endMsg":"You flew in front of a guinea pig."},
+        { "title": "Flee", "outcomes": { "libido": -0.1, "peepoo": - 0.05 }, "endMsg":"You fled a guinea pig."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.1, "suspicion": 0.05 }, "endMsg":"You did nothing in front of a guinea pig."}
       ]
     },
@@ -176,7 +176,7 @@
       "actions": [
         { "title": "Eat", "outcomes": { "health": -0.8, "mood" : 0.02 }, "endMsg":"You've eaten household products."},
         { "title": "Meow", "outcomes": { "hunger": -0.05, "energy": -0.05, "suspicion": 0.05} , "endMsg":"You meowed in front of household products."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05, "mood": -0.05  }, "endMsg":"You flew in front of household products."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "suspicion": 0.05, "mood": -0.05  }, "endMsg":"You fled household products."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.1 }, "endMsg":"You did nothing in front of household products."}
       ]
     },
@@ -201,7 +201,7 @@
       "actions": [
         { "title": "Seduce", "outcomes": { "health": -0.2,"libido":-0.1,"mood":-0.2}, "endMsg":"You tried to seduce an aggressive cat."},
         { "title": "Attack", "outcomes": { "hunger": -0.1, "energy": -0.15, "mood": 0.1 } , "endMsg":"You attacked an aggressive cat."}, 
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of an aggressive cat."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You fled an aggressive cat."},
         { "title": "Do nothing", "outcomes": { "health": -0.2, "hunger": -0.1, "mood": -0.2, "energy": -0.05 }, "endMsg":"You didn't defend yourself against an aggressive cat."}
         
       ]
@@ -227,7 +227,7 @@
       "actions": [
         { "title": "Seduce", "outcomes": { "hunger": -0.05, "libido": 0.3 } , "endMsg": "You tried to seduce a nice cat."}, 
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.15 }, "endMsg":"You attacked a nice cat."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of a nice cat."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You fled in front of a nice cat."},
         { "title": "Do nothing", "outcomes": { "health": -0.2, "hunger": -0.1, "mood": -0.2, "energy": -0.05 }, "endMsg":"You did nothing in front of a nice cat."}
       ]
     },
@@ -265,7 +265,7 @@
       "actions": [
         { "title": "Meow", "outcomes": { "hunger": -0.05, "energy": -0.05, "mood": 0.1, "suspicion": 0.05 } , "endMsg": "You meowed in front of children."}, 
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "suspicion": -0.1 }, "endMsg":"You attacked children."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You flew in front of children."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1 }, "endMsg":"You fled in front of children."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.1 }, "endMsg": "You did nothing in front of children."}
       ]
     },
@@ -286,7 +286,7 @@
       "actions": [
         { "title": "Seduce", "outcomes": { "health": -0.2, "libido": -0.1, "mood": -0.15, "suspicion": -0.05 } , "endMsg": "You tried to seduce a dog, but it attacked you."}, 
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "health": -0.1 }, "endMsg":"You attacked a dog, and it fought back."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1, "suspicion": 0.05}, "endMsg":"You flew in front of a dog."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1, "suspicion": 0.05}, "endMsg":"You fled a dog."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.1, "suspicion": 0.05 }, "endMsg": "You did nothing in front of a dog."}
       ]
     },
@@ -308,7 +308,7 @@
       "actions": [
         { "title": "Eat", "outcomes": { "energy": 0.2, "hunger": 0.3, "mood": 0.1, "suspicion": 0.05 }, "endMsg":"You ate a bird."},
         { "title": "Attack", "outcomes": { "energy": 0.05, "hunger": 0.3, "mood": 0.2, "suspicion": 0.05 }, "endMsg":"You attacked a bird. And after playing with it, you ended up eating it."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1 }, "endMsg":"You attacked a bird."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1 }, "endMsg":"You fled a bird."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.1 }, "endMsg": "You did nothing in front of a bird."}
       ]
     },
@@ -330,7 +330,7 @@
       "actions": [
         { "title": "Eat", "outcomes": { "energy": 0.2, "hunger": 0.3, "mood": 0.1, "suspicion": 0.05 }, "endMsg":"You ate a mouse."},
         { "title": "Attack", "outcomes": { "energy": 0.05, "hunger": 0.3, "mood": 0.2, "suspicion": 0.05 }, "endMsg":"You attacked a mouse. And after playing with it, you ended up eating it."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1}, "endMsg": "You flew in front of a stone."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1}, "endMsg": "You fled a mouse."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.1 }, "endMsg": "You did nothing in front of a mouse."}
       ]
     },
@@ -345,7 +345,7 @@
       "actions": [
         { "title": "Eat", "outcomes": { "health": -0.2, "hunger": -0.05, "mood": -0.15, "suspicion": -0.1 }, "endMsg":"You tried to eat a stone."},
         { "title": "Attack", "outcomes": { "energy": -0.1, "hunger": -0.1, "mood": -0.1, "suspicion": -0.1 }, "endMsg":"You attacked a stone."},
-        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1}, "endMsg": "You flew in front of a stone."},
+        { "title": "Flee", "outcomes": { "energy": -0.1, "hunger": -0.05, "mood": -0.1}, "endMsg": "You fled a stone."},
         { "title": "Do nothing", "outcomes": { "energy": -0.05, "hunger": -0.1, "suspicion": 0.05 }, "endMsg": "You did nothing in front of a stone."}
       ]
     },
@@ -567,7 +567,7 @@
       ],
       "actions": [
         { "title": "Bark", "outcomes": { "hunger": -0.05, "mood": -0.1, "energy": -0.05 }, "endMsg":"You barked in front of the post man."},
-        { "title": "Run", "outcomes": { "mood": -0.1, "energy": -0.1 } , "endMsg":"You ran toward the post man."},
+        { "title": "Run", "outcomes": { "mood": -0.1, "energy": -0.1 } , "endMsg":"You ran towards the post man."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05, "suspicion": 0.05}, "endMsg": "You did nothing in front of the post man."}
       ]
     },
@@ -584,7 +584,7 @@
       ],
       "actions": [
         { "title": "Touch", "outcomes": { "hunger": -0.05, "mood": 0.1 }, "endMsg":"You touched a cat."},
-        { "title": "Run", "outcomes": { "mood": -0.1, "energy": -0.1 } , "endMsg":"You ran toward a cat."},
+        { "title": "Run", "outcomes": { "mood": -0.1, "energy": -0.1 } , "endMsg":"You ran towards a cat."},
         { "title": "Do nothing", "outcomes": {"energy": -0.05, "hunger": -0.05, "suspicion": 0.05}, "endMsg": "You did nothing in front of a cat."}
       ]
     },

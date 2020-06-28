@@ -72,7 +72,7 @@ export default function MainScene() {
                 {lastOutcome !== null ?
                 <div className="outcome">
                     <p>{lastOutcome}</p>
-                    {points === 5 && skills.length < 15 ? <>
+                    {points === 5 && skills.length < 12 ? <>
                             <p>You also have enough points to unlock a new skill, to better understand your host!</p>
                             <Button onClick={openSkills}>Choose a new skill</Button>
                         </> : <Button onClick={nextEvent}>Okay</Button>}
