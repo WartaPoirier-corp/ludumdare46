@@ -6,7 +6,7 @@ Parasist is the game we made for the 46th Ludum Dare. The theme was *Keep it ali
 you are a parasite making choice for the animal hosting you, in order to keep it alive as long as possible,
 so that you can yourself survive.
 
-The game is [available online](https://parasists.argupedia.org), and on the [Ludum Dare website](https://ldjam.com/events/ludum-dare/46/parasist).
+The game is [available online](https://parasist.wp-corp.eu.org), and on the [Ludum Dare website](https://ldjam.com/events/ludum-dare/46/parasist).
 
 ![Screenshot](https://static.jam.vg/raw/abc/f2/z/2df3a.png)
 
