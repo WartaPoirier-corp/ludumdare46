@@ -67,8 +67,8 @@ export default function Game() {
     return (
         <ReduxProvider store={store}>
             <div className="invisible">
-                {imgs.map(i => <img src={i} />)}
-                {sounds.map(s => <audio src={s}></audio>)}
+                {imgs.map(i => <img alt="preloaded" key={i} src={i} />)}
+                {sounds.map(s => <audio key={s} src={s}/>)}
             </div>
             <Router />
         </ReduxProvider>

@@ -27,7 +27,6 @@ export default function MainScene() {
             points: state.points,
         };
     });
-    console.log(points);
 
     const dispatch = useDispatch();
     React.useEffect(() => {

@@ -14,8 +14,8 @@ export default function IntroScene() {
     return (
         <div className="intro">
             <div className="intro-text">
-                {introText.map((paragraph) => (
-                    <p>{paragraph}</p>
+                {introText.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
                 ))}
             </div>
             <Button onClick={next}>Okay, let's go</Button>
