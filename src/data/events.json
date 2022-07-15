@@ -157,7 +157,7 @@
         { "title": "Eat", "outcomes": { "libido": -0.1, "hunger": 0.2, "peepoo": -0.05 , "suspicion": -0.35}, "endMsg":"You've eaten a guinea pig."},
         { "title": "Attack", "outcomes": { "suspicion": -0.1, "energy": -0.1, "mood": -0.1 } , "endMsg":"You have fiercely attacked a guinea pig."},
         { "title": "Relieve yourself", "outcomes": { "peepoo": 0.2, "libido": -0.1, "suspicion": -0.1 } , "endMsg":"You defacated on a guinea pig."},
-        { "title": "Flee", "outcomes": { "libido": -0.1, "peepoo": - 0.05 }, "endMsg":"You fled a guinea pig."},
+        { "title": "Flee", "outcomes": { "libido": -0.1, "peepoo": -0.05 }, "endMsg":"You fled a guinea pig."},
         { "title": "Do nothing", "outcomes": { "energy": -0.1, "hunger": -0.1, "suspicion": 0.05 }, "endMsg":"You did nothing in front of a guinea pig."}
       ]
     },

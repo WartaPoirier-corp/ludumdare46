@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import Game from './Game';
 import * as Schema from './schema';
 
-ReactDOM.render(React.createElement(Game), document.querySelector('#app'));
+ReactDOM.createRoot(document.querySelector('#app')!).render(React.createElement(Game));
